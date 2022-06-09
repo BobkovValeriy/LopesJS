@@ -1,0 +1,16 @@
+.example {
+  padding: 100px 0 0 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.example__wrapper {
+  background-color: #FFC7BD;
+  margin: 4% auto;
+}
+
+.example__wrapper-item {
+  text-align: center;
+  font-size: 30px;
+}

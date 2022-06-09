@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Lopes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="main">
+    <div class="main__wrapper">
+        <!-- @import 'menu.html'-->
+        <div class="example">
+            <div class="example__wrapper">
+                <h1 class="example__title"> Основы <span>JS</span></h1>
+                <ul class="example__list">
+                    <li class="example-items">
+                        <div class="example-item hoverable">Привет, мир!<span class="marker">V</span></div>
+                        <div class="example-item__homework display__none">
+                            <form name="hello_world" action="#" class="hello__world">
+                                <div class="hello__world-item">
+                                    <label for="input_1" class="label">Введи шо хош))</label>
+                                    <input id="input_1" type="text" value="" name="helloWorldInput"
+                                        class="hello__world-input">
+                                </div>
+                                <div class="button__form button__form-hello hoverable">Пуск!</div>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item hoverable">Структура кода<span class="marker">V</span></div>
+                        <div class="example-item__homework display__none">
+                            <div class="example-item__decor">Инструкции – это синтаксические конструкции и
+                                команды, которые выполняют действия.</div>
+                            <div class="example-item__decor">Мы уже видели инструкцию alert('Привет, мир!'),
+                                которая отображает сообщение «Привет, мир!».</div>
+                            <div class="example-item__decor">В нашем коде может быть столько инструкций, сколько
+                                мы захотим. Инструкции могут отделяться точкой с запятой.</div>
+                            <div class="example-item__decor">Обычно каждую инструкцию пишут на новой строке,
+                                чтобы код было легче читать.
+                                В большинстве случаев точку с запятой можно не ставить, если есть переход на новую
+                                строку.
+                                В этом случае JavaScript интерпретирует перенос строки как «неявную» точку с запятой.
+                                Это называется автоматическая вставка точки с запятой.
+                            </div>
+                            <div class="example-item__decor">JavaScript не вставляет точку с запятой перед
+                                квадратными скобками [...].
+                                Это может произойти и в некоторых других ситуациях.
+                                Мы рекомендуем ставить точку с запятой между инструкциями, даже если они отделены
+                                переносами строк.
+                                Это правило широко используется в сообществе разработчиков.
+                                Стоит отметить ещё раз – в большинстве случаев можно не ставить точку с запятой.
+                                Но безопаснее, особенно для новичка, ставить её.
+                            </div>
+                            <div class="example-item__decor">Со временем программы становятся всё сложнее и
+                                сложнее.
+                                Возникает необходимость добавлять комментарии, которые бы описывали, что делает код и
+                                почему.
+                                Комментарии могут находиться в любом месте скрипта.
+                                Они не влияют на его выполнение, поскольку движок просто игнорирует их.
+                                Однострочные комментарии начинаются с двойной косой черты //.
+                                Многострочные комментарии начинаются косой чертой со звёздочкой /* и заканчиваются
+                                звёздочкой с косой чертой */.</div>
+                        </div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item hoverable">Строгий режим — "use strict"<span class="marker">V</span>
+                        </div>
+                        <div class="example-item__homework display__none">
+                            <div class="example-item__decor">На протяжении долгого времени JavaScript развивался без
+                                проблем с обратной совместимостью. Новые функции добавлялись в язык, в то время как
+                                старая функциональность не менялась.</div>
+                            <div class="example-item__decor">Преимуществом данного подхода было то, что существующий код
+                                продолжал работать. А недостатком – что любая ошибка или несовершенное решение, принятое
+                                создателями JavaScript, застревали в языке навсегда.</div>
+                            <div class="example-item__decor">Так было до 2009 года, когда появился ECMAScript 5 (ES5).
+                                Он добавил новые возможности в язык и изменил некоторые из существующих. Чтобы
+                                устаревший код работал, как и раньше, по умолчанию подобные изменения не применяются.
+                                Поэтому нам нужно явно их активировать с помощью специальной директивы: "use strict".
+                            </div>
+                            <div class="example-item__decor">Директива выглядит как строка: "use strict" или 'use
+                                strict'. Когда она находится в начале скрипта, весь сценарий работает в «современном»
+                                режиме.
+                                Позже мы изучим функции (способ группировки команд). Забегая вперёд, заметим, что вместо
+                                всего скрипта "use strict" можно поставить в начале большинства видов функций. Это
+                                позволяет включить строгий режим только в конкретной функции. Но обычно люди используют
+                                его для всего файла.
+                                Проверьте, что "use strict" находится в первой исполняемой строке скрипта, иначе строгий
+                                режим может не включиться.
+                                Нет директивы типа "no use strict", которая возвращала бы движок к старому поведению.
+                                Как только мы входим в строгий режим, отменить это невозможно.
+                            </div>
+                            <div class="example-item__decor">В дальнейшем, когда вы будете использовать консоль браузера
+                                для тестирования функций, обратите внимание, что use strict по умолчанию в ней выключен.
+                                Иногда, когда use strict имеет значение, вы можете получить неправильные результаты.
+                            </div>
+                            <h2 class="example__title">Всегда ли нужно использовать «use strict»?</h2>
+                            <div class="example-item__decor">Вопрос кажется риторическим, но это не так.
+                                Кто-то посоветует начинать каждый скрипт с "use strict"… Но есть способ покруче.
+                                Современный JavaScript поддерживает «классы» и «модули» — продвинутые структуры языка (и
+                                мы, конечно, до них доберёмся), которые автоматически включают строгий режим. Поэтому в
+                                них нет нужды добавлять директиву "use strict".</div>
+                            <div class="example-item__decor">Подытожим: пока очень желательно добавлять "use strict"; в
+                                начале ваших скриптов. Позже, когда весь ваш код будет состоять из классов и модулей,
+                                директиву можно будет опускать.
+                                Пока мы узнали о use strict только в общих чертах.
+                                В следующих главах, по мере расширения знаний о возможностях языка, мы яснее увидим
+                                отличия между строгим и стандартным режимом. К счастью, их не так много, и все они
+                                делают жизнь разработчика лучше.
+                                Все примеры в этом учебнике подразумевают исполнение в строгом режиме, за исключением
+                                случаев (очень редких), когда оговорено иное.</div>
+                        </div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item hoverable">Переменные<span class="marker">V</span></div>
+                        <div class="example-item__homework display__none">
+                            <form name="variables" action="#" class="variable">
+                                <div class="variable-item">
+                                    <label for="input_2" class="label">Введи переменную name.</label>
+                                    <input id="input_2" type="text" value="" name="variableInput"
+                                        class="variable-input">
+                                </div>
+                                <div class="button__form button__form-variable hoverable">Пуск!</div>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item hoverable">Типы данных<span class="marker">V</span></div>
+                        <div class="example-item__homework display__none">
+                            <h2 class="example__title">Итого</h2>
+                            <div class="example-item__decor">
+                                В JavaScript есть 8 основных типов.
+                            </div>
+                            <ul>
+                                <li class="data__type">
+                                    <div class="example-item__decor">
+                                        <span class="green"> number </span>для любых чисел: целочисленных или чисел с
+                                        плавающей точкой;
+                                        целочисленные значения ограничены диапазоном ±(253-1).
+                                    </div>
+                                </li>
+                                <li class="data__type">
+                                    <div class="example-item__decor">
+                                        <span class="green"> bigint </span> для целых чисел произвольной длины.
+                                    </div>
+                                </li>
+                                <li class="data__type">
+                                    <div class="example-item__decor">
+                                        <span class="green"> string </span> для строк. Строка может содержать ноль или
+                                        больше символов, нет отдельного символьного типа.
+                                    </div>
+                                </li>
+                                <li class="data__type">
+                                    <div class="example-item__decor">
+                                        <span class="green"> boolean </span> для true/false.
+                                    </div>
+                                </li>
+                                <li class="data__type">
+                                    <div class="example-item__decor">
+                                        <span class="green"> null </span> для неизвестных значений – отдельный тип,
+                                        имеющий одно значение null.
+                                    </div>
+                                </li>
+                                <li class="data__type">
+                                    <div class="example-item__decor">
+                                        <span class="green"> undefined </span> для неприсвоенных значений – отдельный
+                                        тип, имеющий одно значение undefined.
+                                    </div>
+                                </li>
+                                <li class="data__type">
+                                    <div class="example-item__decor">
+                                        <span class="green"> object </span> для более сложных структур данных.
+                                    </div>
+                                </li>
+                                <li class="data__type">
+                                    <div class="example-item__decor">
+                                        <span class="green"> symbol </span> для уникальных идентификаторов.
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="example-item__decor">
+                                Оператор typeof позволяет нам увидеть, какой тип данных сохранён в переменной.
+                                Имеет две формы: typeof x или typeof(x).
+                                Возвращает строку с именем типа. Например, "string".
+                                Для null возвращается "object" – это ошибка в языке, на самом деле это не объект.</div>
+                        </div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item  hoverable">Взаимодействие: alert, prompt, confirm<span
+                                class="marker">V</span>
+                        </div>
+                        <div class="example-item__homework display__none">
+                            <div class="button__form button__form-interaction hoverable">Пуск!</div>
+                        </div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item hoverable">Преобразование типов<span class="marker">V</span></div>
+                        <div class="example-item__homework display__none">
+                            <h2 class="example__title">Итого</h2>
+                            <div class="example-item__decor"> Существует 3 наиболее широко используемых преобразования:
+                                строковое, численное и логическое.</div>
+                            <div class="example-item__decor"><span class="green">Строковое</span> – Происходит, когда
+                                нам нужно что-то вывести. Может быть вызвано с помощью String(value). Для примитивных
+                                значений работает очевидным образом.</div>
+                            <div class="example-item__decor"><span class="green">Численное</span> – Происходит в
+                                математических операциях. Может быть вызвано с помощью Number(value).
+                                <p>Значение <span class="green">undefined</span>. Становится <span
+                                        class="green">NaN</span>.</p>
+                                <p>Значение <span class="green">null</span>. Становится <span class="green">0</span>.
+                                </p>
+                                <p>Значение <span class="green">true / false</span>. Становится <span class="green">1 /
+                                        0</span>.</p>
+                                <p>Значение <span class="green">string</span>. Пробельные символы по краям обрезаются.
+                                    Далее, если
+                                    остаётся пустая строка, то получаем <span class="green">0</span>, иначе из непустой
+                                    строки «считывается» число.
+                                    При ошибке результат <span class="green">NaN</span>..</p>
+                            </div>
+                            <div class="example-item__decor"><span class="green">Логическое</span> – Происходит в
+                                логических операциях. Может быть вызвано с помощью Boolean(value).
+                                <p>Значения <span class="green">0, null, undefined, NaN, ""</span>. Становится <span
+                                        class="green">false</span>
+                                <p>Любое другое значение становится <span class="green">true</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item hoverable">Базовые операторы, математика<span class="marker">V</span>
+                        </div>
+                        <div class="example-item__homework display__none"></div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item hoverable">Операторы сравнения<span class="marker">V</span></div>
+                        <div class="example-item__homework display__none"></div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item hoverable">Условное ветвление: if, '?'<span class="marker">V</span>
+                        </div>
+                        <div class="example-item__homework display__none"></div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item hoverable">Логические операторы<span class="marker">V</span></div>
+                        <div class="example-item__homework display__none"></div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item hoverable">Оператор нулевого слияния (??)<span class="marker">V</span>
+                        </div>
+                        <div class="example-item__homework display__none"></div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item hoverable">Циклы while и for<span class="marker">V</span></div>
+                        <div class="example-item__homework display__none"></div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item hoverable">Конструкция "switch"<span class="marker">V</span></div>
+                        <div class="example-item__homework display__none"></div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item hoverable">Функции<span class="marker">V</span></div>
+                        <div class="example-item__homework display__none"></div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item hoverable">Function Expression<span class="marker">V</span></div>
+                        <div class="example-item__homework display__none"></div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item hoverable">Стрелочные функции, основы<span class="marker">V</span>
+                        </div>
+                        <div class="example-item__homework display__none"></div>
+                    </li>
+                    <li class="example-items">
+                        <div class="example-item hoverable">Особенности JavaScript<span class="marker">V</span></div>
+                        <div class="example-item__homework display__none"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- @import 'footer.html'-->
+    </div>
+    <script src="js\script.js"></script>
+</body>
+
+</html>
