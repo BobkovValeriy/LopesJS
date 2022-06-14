@@ -382,12 +382,39 @@ h6 {
   transition: all 0.2s ease 0s;
 }
 
+.done {
+  position: absolute;
+  color: green;
+  font-size: 8px;
+  font-weight: 900;
+  top: 5px;
+  right: 32px;
+}
+
+.done2 {
+  position: absolute;
+  color: green;
+  font-size: 8px;
+  font-weight: 900;
+  top: 5px;
+  right: 56px;
+}
+
+.inprogress {
+  position: absolute;
+  color: red;
+  font-size: 8px;
+  font-weight: 900;
+  top: 5px;
+  right: 32px;
+}
+
 .clicked {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.hello__world, .variable {
+.hello__world, .variable, .base__operators-math {
   padding: 10px 20px 20px 40px;
   -ms-grid-column-align: auto;
       justify-self: auto;
@@ -403,7 +430,8 @@ h6 {
 }
 
 .hello__world-input,
-.variable-input {
+.variable-input,
+.base__operators-math-item-input {
   padding: 5px 10px 5px 15px;
   height: 40px;
   width: 100%;
@@ -444,6 +472,12 @@ h6 {
 .example-item__decor {
   font-size: 22px;
   padding: 10px 10px 10px 20px;
+}
+
+.example-item__decor-center {
+  font-size: 30px;
+  text-align: center;
+  margin: 26px auto;
 }
 
 .data__type {

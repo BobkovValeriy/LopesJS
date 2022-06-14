@@ -53,10 +53,34 @@
     right: 15px;
     transition: all 0.2s ease 0s;
 }
+.done{
+    position: absolute;
+    color: green;
+    font-size: 8px;
+    font-weight: 900;
+    top: 5px;
+    right: 32px;
+}
+.done2{
+    position: absolute;
+    color: green;
+    font-size: 8px;
+    font-weight: 900;
+    top: 5px;
+    right: 56px;
+}
+.inprogress{
+    position: absolute;
+    color: red;
+    font-size: 8px;
+    font-weight: 900;
+    top: 5px;
+    right: 32px;
+}
 .clicked{
     transform: rotate(180deg);
 }
-.hello__world,.variable {
+.hello__world,.variable,.base__operators-math {
     padding: 10px 20px 20px 40px;
     justify-self: auto;
     display: grid;
@@ -70,7 +94,8 @@
     font-size: 20px;
 }
 .hello__world-input
-,.variable-input{
+,.variable-input
+,.base__operators-math-item-input{
     padding: 5px 10px 5px 15px;
     height: 40px;
     width: 100%;
@@ -109,6 +134,11 @@
     font-size: 22px;
     padding: 10px 10px 10px 20px;
 }
+.example-item__decor-center{
+    font-size: 30px;
+    text-align: center;
+    margin: 26px auto;
+}
 .variable-item {
 }
 .button__form-variable {
@@ -126,4 +156,8 @@
     bottom: auto;
     left: 0;
     right: 0;
+}
+.base__operators-math-item {
+}
+.button__baseoperators-mathitem {
 }
