@@ -349,21 +349,81 @@
                             <div class="button__form button__form-logicoperators hoverable">Пуск!</div>
                         </div>
                     </li>
-                    <!-- -->
+                    <!-- Нулевое слияние-->
                     <li class="example-items">
                         <div class="example-item hoverable">Оператор нулевого слияния (??)
-                            <span class="inprogress">In progress</span>
+                            <span class="done">done</span>
                             <span class="marker">V</span>
                         </div>
-                        <div class="example-item__homework display__none"></div>
+                        <div class="example-item__homework display__none">
+                            <div class="example-item__decor">
+                                Оператор нулевого слияния ?? — это быстрый способ выбрать первое «определённое» значение
+                                из
+                                списка.
+                            </div>
+                            <div class="example-item__decor">Используется для присвоения переменным значений по
+                                умолчанию:</div>
+                            <div class="example-item__decor">
+                                // будет height=100, если переменная height равна null или undefined
+                                height = height ?? 100;
+                            </div>
+                            <div class="example-item__decor">
+                                Оператор ?? имеет очень низкий приоритет, лишь немного выше, чем у ? и =, поэтому при
+                                использовании его в выражении, скорее всего, потребуются скобки.
+                            </div>
+                            <div class="example-item__decor">
+                                Запрещено использовать вместе с || или && без явно указанного приоритета, то есть без
+                                скобок.
+                            </div>
+                        </div>
                     </li>
-                    <!-- -->
+                    <!-- Циклы While and For -->
                     <li class="example-items">
                         <div class="example-item hoverable">Циклы while и for
-                            <span class="inprogress">In progress</span>
+                            <span class="done">done</span>
                             <span class="marker">V</span>
                         </div>
-                        <div class="example-item__homework display__none"></div>
+                        <div class="example-item__homework display__none">
+                            <div class="example-item__decor">Мы рассмотрели 3 вида циклов: </div>
+
+                            <div class="example-item__decor">while – Проверяет условие перед каждой итерацией.
+                                do..while – Проверяет условие после каждой итерации.
+                                for (;;) – Проверяет условие перед каждой итерацией, есть возможность задать
+                                дополнительные
+                                настройки.</div>
+
+                            <div class="example-item__decor">Чтобы организовать бесконечный цикл, используют конструкцию
+                                while (true). При этом он, как и
+                                любой другой цикл, может быть прерван директивой break.</div>
+
+                            <div class="example-item__decor">Если на данной итерации цикла делать больше ничего не надо,
+                                но полностью прекращать цикл не
+                                следует – используют директиву continue.</div>
+
+                            <div class="example-item__decor">Обе этих директивы поддерживают метки, которые ставятся
+                                перед циклом. Метки – единственный
+                                способ для break/continue выйти за пределы текущего цикла, повлиять на выполнение
+                                внешнего.</div>
+
+                            <div class="example-item__decor">Заметим, что метки не позволяют прыгнуть в произвольное
+                                место кода, в JavaScript нет такой
+                                возможности.</div>
+                            <div class="example-item__decor-center">Выводим чётные числа</div>
+                            <div class="button__form button__cikles-1 hoverable">Пуск!</div>
+                            <div class="example-item__decor-center">Заменили for на while</div>
+                            <div class="button__form button__cikles-2 hoverable">Пуск!</div>
+                            <div class="example-item__decor-center">Повторяем цикл, пока ввод неверен</div>
+                            <div class="button__form button__cikles-3 hoverable">Пуск!</div>
+                            <form name="cikles" action="#" class="form__cikles">
+                                <div class="form__cikles-item">
+                                    <label for="form__cikles-input" class="label">Обозначте верхнюю границу вывода
+                                        простых чисел</label>
+                                    <input id="form__cikles-input" type="text" value="" name="formCiklesInput"
+                                        class="form__cikles-item-input">
+                                    <span class="button__form button__cikles-4 hoverable">Пуск!</span>
+                                </div>
+                            </form>
+                        </div>
                     </li>
                     <!-- -->
                     <li class="example-items">

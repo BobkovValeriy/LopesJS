@@ -1,129 +1,40 @@
+:root{
+    --text-size-common: 22px;
+    --text-size-header-1: 32px;
+    --text-size-header-2: 26px;
+    --text-size-marker: 18px;
+}
+@media(max-width: 768px){
+    :root{
+        --text-size-common: 18px;
+        --text-size-header-1: 28px;
+        --text-size-header-2: 22px;
+        --text-size-marker: 17px;
+    }
+}
+@media(max-width: 600px){
+    :root{
+        --text-size-common: 16px;
+        --text-size-header-1: 26px;
+        --text-size-header-2: 20px;
+        --text-size-marker: 16px;
+    }
+}
+
+
 @import "nullfile.scss";
 @import "footer.scss";
 @import "menu.scss";
 @import "baseJS";
+
+
+body{
+    min-width: 420px;
+}
 .main {
     background-color: #65A6D1;
     height: 100%;
 }
-.login {
-    padding: 100px 0 0 0;
-    flex: 1 1 auto;
-}
-.login__wrapper {
-    background-color: #FFC7BD;
-    margin: 4% auto;
-}
-.login__wrapper {
-}
-.login__change {
-}
-.login__menu{
-}
-.login__change-wrapper {
-    display: grid;
-    height: 598px;
-    grid-template: 1fr/  1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    font-size: 60px;
-}
-.login__change-item {
-    background-color: #FFDA73;
-    width: 400px;
-    text-align: center;
-    border-radius: 30px;
-}
-.login__form{
-    display: grid;
-    height: 598px;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-items: center;
-    font-size: 40px;
-
-}
-.login__menu-str {
-    width: 300px;
-}
-.login__menu-str-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    align-self: center;
-    margin-bottom: 150px;
-}
-.login__menu-str-item-button{
-    font-size: 30px;
-    text-align: center;
-    margin: 20px 20px 20px 0;
-    width: 250px;
-    border-radius: 30px;
-    background-color: #FFDA73;
-}
-.registration__menu{
-    padding: 20px;
-}
-.registration__form{
-    display: grid;
-    font-size: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-}
-
-
-.registration__form-mail{
-    display: block;
-    padding: 10px;
-    border-radius: 10px;
-    width: 90%;
-}
-.registration__form-login{
-    background-color: green;
-    margin: 20px;
-}
-.registration__form-str {
-    padding: 20px;
-}
-.registration__form-mail {
-}
-.registration__form-pass {
-    display: block;
-    padding: 10px;
-    border-radius: 10px;
-    width: 90%;
-}
-.registration__form-pass2{
-    display: block;
-    padding: 10px;
-    border-radius: 10px;
-    width: 90%;
-}
-.registration__form-sex{
-    background-color: purple;
-    margin: 20px;
-    padding: 20px;
-}
-.registration__form-sex-str{
-    margin: auto;
-    padding: 20px 0 0 20px;
-    font-size: 30px;
-}
-.registration__button {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-}
-.registration__button-item {
-    font-size: 30px;
-    text-align: center;
-    margin: 20px 20px 20px 80px;
-    width: 300px;
-    border-radius: 30px;
-    background-color: #65A6D1;
-
-}
-
 .hoover{
     transition: all 0.3s ease 0s;
     color: #fff;

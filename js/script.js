@@ -18,6 +18,10 @@ function appInit() {
         initBranching1,
         initBranching2,
         initLogicOperators,
+        initCikles1,
+        initCikles2,
+        initCikles3,
+        initCikles4,
     ];
 
     appFunctions.forEach(func => func());
@@ -183,4 +187,57 @@ function initLogicOperators() {
             alert('Я вас не знаю')
         }
     })
+}
+//example cikles 1
+function initCikles1() {
+    const cikles1 = document.querySelector('.button__cikles-1');
+
+    cikles1.addEventListener('click', function (event) {
+        for (let i = 1; i < 11; i++) {
+            if (i % 2 == 0) {
+                alert(i);
+            }
+        }
+    });
+};
+//example cikles 2
+function initCikles2() {
+    const cikles2 = document.querySelector('.button__cikles-2');
+
+    cikles2.addEventListener('click', function (event) {
+        let i = 0;
+
+        while (i < 3) {
+            alert(`number ${i}!`);
+            i++;
+        }
+    });
+};
+//example cikles 3
+function initCikles3() {
+    const cikles3 = document.querySelector('.button__cikles-3');
+
+    cikles3.addEventListener('click', function (event) {
+        let cikles3val
+
+        do {
+            cikles3val = prompt('введи число, большее 100', 0);
+        } while (cikles3val <= 100 && cikles3val);
+    });
+};
+//example cikles 4
+function initCikles4() {
+    const cikles4 = document.querySelector('.button__cikles-4');
+
+    cikles4.addEventListener('click', function (event) {
+        let cikles4operand = document.forms.cikles.formCiklesInput.value;
+
+        nextPrime:
+        for (let i = 2; i <= cikles4operand; i++) {
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) continue nextPrime;
+            }
+            alert(i)
+        };
+    });
 }

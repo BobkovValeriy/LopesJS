@@ -12,7 +12,7 @@
     font-size: 30px;
 }
 .example__title {
-    font-size: 32px;
+    font-size: var(--text-size-header-1);
     text-align: center;
     margin: 20px 0 20px 0;
 }
@@ -30,6 +30,7 @@
 }
 .example-items {
     background-color: #12b5ce;
+    font-size: var(--text-size-header-2);
     position: relative;
     padding: 0px 10px 0px 15px;
     line-height: 1.5;
@@ -47,7 +48,7 @@
 }
 .marker{
     position: absolute;
-    font-size: 18px;
+    font-size: var(--text-size-marker);
     font-weight: 900;
     top: 0;
     right: 15px;
@@ -91,20 +92,21 @@
 }
 .label{
     display: block;
-    font-size: 20px;
+    font-size:var(--text-size-common);
 }
 .hello__world-input
 ,.variable-input
-,.base__operators-math-item-input{
+,.base__operators-math-item-input
+,.form__cikles-item-input{
     padding: 5px 10px 5px 15px;
     height: 40px;
     width: 100%;
-    font-size: 20px;
+    font-size: var(--text-size-common);
     background-color: #13d9f8;
     border-radius: 5px;
 }
 .button__form {
-    font-size: 30px;
+    font-size: var(--text-size-header-1);
     text-align: center;
     margin: 26px auto;
     width: 300px;
@@ -113,7 +115,6 @@
 }
 @media(max-width: 768px){
     .button__form {
-        font-size: 24px;
         text-align: center;
         margin: 30px auto;
         width: 200px;
@@ -131,11 +132,11 @@
 .button__form-hello {
 }
 .example-item__decor{
-    font-size: 22px;
+    font-size: var(--text-size-common);
     padding: 10px 10px 10px 20px;
 }
 .example-item__decor-center{
-    font-size: 30px;
+    font-size: var(--text-size-header-2);
     text-align: center;
     margin: 26px auto;
 }
@@ -160,4 +161,14 @@
 .base__operators-math-item {
 }
 .button__baseoperators-mathitem {
+}
+.button__cikles-1{}
+.button__cikles-2{}
+.button__cikles-3{}
+.button__cikles-4{
+    display: inline-block;
+}
+.form__cikles-item-input{
+    margin: 0 40px 0 40px;
+    width: auto;
 }
