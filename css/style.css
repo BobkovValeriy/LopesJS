@@ -21,6 +21,30 @@
     --text-size-marker: 16px;
   }
 }
+@media (max-width: 532px) {
+  :root {
+    --text-size-common: 12px;
+    --text-size-header-1: 22px;
+    --text-size-header-2: 16px;
+    --text-size-marker: 14px;
+  }
+}
+@media (max-width: 450px) {
+  :root {
+    --text-size-common: 10px;
+    --text-size-header-1: 20px;
+    --text-size-header-2: 14px;
+    --text-size-marker: 13px;
+  }
+}
+@media (max-width: 401px) {
+  :root {
+    --text-size-common: 8px;
+    --text-size-header-1: 18px;
+    --text-size-header-2: 12px;
+    --text-size-marker: 12px;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -456,7 +480,8 @@ h6 {
 .hello__world-input,
 .variable-input,
 .base__operators-math-item-input,
-.form__cikles-item-input {
+.form__cikles-item-input,
+.form__switch-item-input {
   padding: 5px 10px 5px 15px;
   height: 40px;
   width: 100%;
@@ -521,13 +546,20 @@ h6 {
   right: 0;
 }
 
-.button__cikles-4 {
+.button__cikles-4,
+.button__switch-1 {
   display: inline-block;
 }
 
-.form__cikles-item-input {
+.form__cikles-item-input,
+.form__switch-item-input {
   margin: 0 40px 0 40px;
   width: auto;
+}
+
+.example-item__function-expressions li {
+  list-style-type: circle;
+  margin: 0 0 0 40px;
 }
 
 body {

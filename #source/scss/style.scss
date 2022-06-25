@@ -20,6 +20,30 @@
         --text-size-marker: 16px;
     }
 }
+@media(max-width: 532px){
+    :root{
+        --text-size-common: 12px;
+        --text-size-header-1: 22px;
+        --text-size-header-2: 16px;
+        --text-size-marker: 14px;
+    }
+}
+@media(max-width: 450px){
+    :root{
+        --text-size-common: 10px;
+        --text-size-header-1: 20px;
+        --text-size-header-2: 14px;
+        --text-size-marker: 13px;
+    }
+}
+@media(max-width: 401px){
+    :root{
+        --text-size-common: 8px;
+        --text-size-header-1: 18px;
+        --text-size-header-2: 12px;
+        --text-size-marker: 12px;
+    }
+}
 
 
 @import "nullfile.scss";

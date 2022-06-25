@@ -97,7 +97,8 @@
 .hello__world-input
 ,.variable-input
 ,.base__operators-math-item-input
-,.form__cikles-item-input{
+,.form__cikles-item-input
+,.form__switch-item-input{
     padding: 5px 10px 5px 15px;
     height: 40px;
     width: 100%;
@@ -165,10 +166,21 @@
 .button__cikles-1{}
 .button__cikles-2{}
 .button__cikles-3{}
-.button__cikles-4{
+.button__cikles-4
+,.button__switch-1{
     display: inline-block;
 }
-.form__cikles-item-input{
+.form__cikles-item-input
+,.form__switch-item-input
+{
     margin: 0 40px 0 40px;
     width: auto;
+}
+.form__switch {
+}
+.form__switch-item {
+}
+.example-item__function-expressions li{
+    list-style-type: circle;
+    margin: 0 0 0 40px;
 }

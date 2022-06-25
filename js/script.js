@@ -22,6 +22,15 @@ function appInit() {
         initCikles2,
         initCikles3,
         initCikles4,
+        initSwitch1,
+        initSwitch2,
+        initFunctions1,
+        initFunctions2,
+        initMin,
+        initFunctions3,
+        initPow,
+        initFunctions4,
+        initArrowFunctions,
     ];
 
     appFunctions.forEach(func => func());
@@ -240,4 +249,125 @@ function initCikles4() {
             alert(i)
         };
     });
+}
+//example switch 1
+function initSwitch1() {
+    const switch1 = document.querySelector('.button__switch-1');
+
+    switch1.addEventListener('click', function (event) {
+        let switch1operand = document.forms.switch.formSwitchInput.value;
+
+        if (switch1operand === 'Edge') {
+            alert("You've got the Edge!");
+        } else if (switch1operand == 'Chrome'
+            || switch1operand == 'Firefox'
+            || switch1operand == 'Safari'
+            || switch1operand == 'Opera') {
+            alert('Okay we support these browsers too');
+        } else {
+            alert('We hope that this page looks ok!');
+        };
+    });
+
+}
+//example switch 2
+function initSwitch2() {
+    const switch2 = document.querySelector('.button__switch-2');
+
+    switch2.addEventListener('click', function (event) {
+        let switch2operand = +prompt('Введите число между 0 и 3', '');
+
+        switch (switch2operand) {
+            case 0:
+                alert('Вы ввели число 0');
+                break;
+            case 1:
+                alert('Вы ввели число 1');
+                break;
+            case 2:
+            case 3:
+                alert('Вы ввели число 2, а может и 3');
+                break;
+        }
+    });
+}
+// example functions 1
+function initFunctions1() {
+    const functions1 = document.querySelector('.button__function-1');
+
+    functions1.addEventListener('click', function (event) {
+        let yourAge = prompt('укажите ваш возраст', '');
+
+        return (yourAge >= 18) ? alert('true') : confirm('Родители разрешили?');
+
+    })
+}
+// example functions 2
+function initFunctions2() {
+    const functions2 = document.querySelector('.button__function-2');
+
+    functions2.addEventListener('click', function (event) {
+        let yourAge = prompt('укажите ваш возраст', '');
+
+
+        return (yourAge >= 18) || confirm('Родители разрешили?');
+    })
+}
+// example functions 3
+function initMin(a, b) {
+    return (a > b) ? a : b
+
+}
+
+function initFunctions3() {
+    const functions3 = document.querySelector('.button__function-3');
+
+    functions3.addEventListener('click', function (event) {
+        let a = prompt('enter value of a vriable', '');
+        let b = prompt('enter value of b vriable', '');
+
+        alert(initMin(a, b))
+    });
+}
+// example functions 4
+function initPow(x, n) {
+    let result = x;
+
+    for (let i = 1; i < n; i++) {
+        alert(x)
+        result *= x;
+    }
+
+    return (result);
+
+}
+
+function initFunctions4() {
+    const functions4 = document.querySelector('.button__function-4');
+
+    functions4.addEventListener('click', function (event) {
+        let x = prompt('enter value of x vriable', '');
+        let n = prompt('enter value of n vriable', '');
+
+        alert(initPow(x, n));
+
+    });
+}
+// example arrow functions
+function ask(question, yes, no) {
+    if (confirm(question)) yes()
+    else no();
+}
+
+function initArrowFunctions() {
+    const arrowFunctions = document.querySelector('.button__arrow-function');
+
+    arrowFunctions.addEventListener('click', function (event) {
+
+        ask(
+            "Вы согласны?",
+            () => { alert("Вы согласились."); },
+            () => { alert("Вы отменили выполнение."); }
+        );
+    })
 }

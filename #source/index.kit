@@ -12,7 +12,7 @@
 <body class="main">
     <div class="main__wrapper">
         <!-- @import 'menu.html'-->
-        <div class="example">
+        <section class="example">
             <div class="example__wrapper">
                 <h1 class="example__title"> Основы <span>JS</span></h1>
                 <ul class="example__list">
@@ -379,51 +379,112 @@
                             </form>
                         </div>
                     </li>
-                    <!-- -->
+                    <!-- Конструкция "switch"-->
                     <li class="example-items">
                         <div class="example-item hoverable">Конструкция "switch"
-                            <span class="inprogress">In progress</span>
+                            <span class="done">done</span>
                             <span class="marker">V</span>
                         </div>
-                        <div class="example-item__homework display__none"></div>
+                        <div class="example-item__homework display__none">
+                            <div class="example-item__decor">
+                                Конструкция switch заменяет собой сразу несколько if.
+
+                                Она представляет собой более наглядный способ сравнить выражение сразу с несколькими
+                                вариантами.
+                            </div>
+                            <form name="switch" action="#" class="form__switch">
+                                <div class="form__switch-item">
+                                    <label for="form__switch-input" class="label">Введите название вашего
+                                        браузера</label>
+                                    <input id="form__switch-input" type="text" value="" name="formSwitchInput"
+                                        class="form__switch-item-input">
+                                    <span class="button__form button__switch-1 hoverable">Пуск!</span>
+                                </div>
+                            </form>
+                            <div class="example-item__decor-center">Введите число между 0 и 3</div>
+                            <div class="button__form button__switch-2 hoverable">Пуск!</d>
+                            </div>
                     </li>
-                    <!-- -->
+                    <!-- Function -->
                     <li class="example-items">
                         <div class="example-item hoverable">Функции
-                            <span class="inprogress">In progress</span>
+                            <span class="done">done</span>
                             <span class="marker">V</span>
                         </div>
-                        <div class="example-item__homework display__none"></div>
+                        <div class="example-item__homework display__none">
+                            <div class="example-item__decor-center">Перепишите функцию, используя оператор '?' или '||'
+                            </div>
+                            <div class="button__form button__function-1 hoverable">'?'</div>
+                            <div class="button__form button__function-2 hoverable">'||'</div>
+                            <div class="example-item__decor-center">Функция min(a, b)</div>
+                            <div class="button__form button__function-3 hoverable">Пуск!</div>
+                            <div class="example-item__decor-center">Функция pow(x,n)</div>
+                            <div class="button__form button__function-4 hoverable">Пуск!</div>
+                        </div>
                     </li>
-                    <!-- -->
+                    <!-- Function Expression -->
                     <li class="example-items">
                         <div class="example-item hoverable">Function Expression
-                            <span class="inprogress">In progress</span>
+                            <span class="done">done</span>
                             <span class="marker">V</span>
                         </div>
-                        <div class="example-item__homework display__none"></div>
+                        <div class="example-item__homework display__none">
+                            <ul class="example-item__function-expressions">
+                                <li>Функции – это значения. Они могут быть присвоены, скопированы или объявлены в любом
+                                    месте кода.</li>
+                                <li>Если функция объявлена как отдельная инструкция в основном потоке кода, то это
+                                    Function Declaration.</li>
+                                <li>Если функция была создана как часть выражения, то считается, что эта функция
+                                    объявлена при помощи Function Expression.</li>
+                                <li>Function Declaration обрабатываются перед выполнением блока кода. Они видны во всём
+                                    блоке.</li>
+                                <li>Функции, объявленные при помощи Function Expression, создаются, только когда поток
+                                    выполнения достигает их.</li>
+                            </ul>
+
+                            <div class="example-item__decor"> В большинстве случаев, когда нам нужно создать функцию,
+                                предпочтительно использовать
+                                Function Declaration, т.к. функция будет видима до своего объявления в коде. Это
+                                позволяет
+                                более гибко организовывать код и улучшает его читаемость.</div>
+
+                            <div class="example-item__decor">Таким образом, мы должны прибегать к объявлению функций при
+                                помощи Function Expression в
+                                случае, когда синтаксис Function Declaration не подходит для нашей задачи. Мы
+                                рассмотрели
+                                несколько таких примеров в этой главе, и рассмотрим их ещё больше в будущем.</div>
+                        </div>
                     </li>
-                    <!-- -->
+                    <!-- Arrow function-->
                     <li class="example-items">
                         <div class="example-item hoverable">Стрелочные функции, основы
-                            <span class="inprogress">In progress</span>
+                            <span class="done">done</span>
                             <span class="marker">V</span>
                         </div>
-                        <div class="example-item__homework display__none"></div>
-                    </li>
-                    <!-- -->
-                    <li class="example-items">
-                        <div class="example-item hoverable">Особенности JavaScript
-                            <span class="inprogress">In progress</span>
-                            <span class="marker">V</span>
+                        <div class="example-item__homework display__none">
+                            <div class="example-item__decor">Стрелочные функции очень удобны для простых действий,
+                                особенно для однострочных.</div>
+
+                            <div class="example-item__decor">Они бывают двух типов:</div>
+
+                            <div class="example-item__decor">Без фигурных скобок: (...args) => expression – правая
+                                сторона выражение: функция вычисляет
+                                его и возвращает результат. Скобки можно не ставить, если аргумент только один: n => n *
+                                2.
+                                С фигурными скобками: (...args) => { body } – скобки позволяют нам писать несколько
+                                инструкций внутри функции, но при этом необходимо явно вызывать return, чтобы вернуть
+                                значение.</div>
+
+                            <div class="example-item__decor-center">Заменили код Function Expression стрелочной
+                                функцией:</div>
+                            <div class="button__form button__arrow-function hoverable">Пуск!</div>
+
                         </div>
-                        <div class="example-item__homework display__none"></div>
                     </li>
-                    <!-- -->
                 </ul>
             </div>
-        </div>
-        <!-- @import 'footer.html'-->
+    </div>
+    <!-- @import 'footer.html'-->
     </div>
     <script src="js\script.js"></script>
 </body>
