@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS-start</title>
+    <title>JS-Lopes2</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -58,32 +58,204 @@
             </li>
         </ul>
     </div>
-</nav>        <div class="login">
-            <div class="login__wrapper">
-                <div class="login__change">
-                    <div class="login__change-wrapper">
-                        <p class="login__change-item enter hoverable">Вход</p>
-                        <p class="login__change-item registration">Регистрация</p>
-                    </div>
-                </div>
-                <div class="login__menu display__none">
-                </div>
-                <div class="registration__menu display__none">
-                    <div class="registration__button">
-                        <div class="registration__button-item hoverable"> Зарегистрироватся</div>
-                        <div class="registration__button-item back__login hoverable"> Назад</div>
-                    </div>
-                </div>
+</nav>        <section class="example">
+            <div class="example__wrapper">
+                <h1 class="example__title"> Качество кода <span>JS</span></h1>
+                <ul class="example__list">
+                    <!--homework debugging! -->
+                    <li class="example-items">
+                        <div class="example-item hoverable">Отладка!
+                            <span class="done">done</span>
+                            <span class="marker">V</span>
+                        </div>
+                        <div class="example-item__homework display__none">
+                            <div class="example-item__decor">Приостановить выполнение скрипта можно тремя способами:
+                            </div>
+
+                            <ul class="example-item__qualityofcode-liststyle">
+                                <li>Точками останова (breakpoints).</li>
+                                <li>Использованием в коде команд debugger.</li>
+                                <li>При ошибке (если инструменты разработчика открыты и кнопка
+                                    <span class="devtools" style="background-position:-90px -146px"></span>
+                                    «включена»).
+                                </li>
+                            </ul>
+                            <div class="example-item__decor">При остановке мы можем отлаживать: анализировать переменные
+                                и пошагово пройти по процессу,
+                                чтобы отыскать проблему.</div>
+
+
+                            <div class="example-item__decor">В инструментах разработчика гораздо больше опций, чем
+                                описано здесь. С полным руководством
+                                можно ознакомиться на
+                                <a href="https://developers.google.com/web/tools/chrome-devtools." target="_blank">
+                                    https://developers.google.com/web/tools/chrome-devtools.
+                                </a>
+                            </div>
+
+                            <div class="example-item__decor">Информации из этой главы достаточно, чтобы начать отладку,
+                                но позже, особенно если вы много
+                                работаете с браузером, пожалуйста, перейдите туда и ознакомьтесь с расширенными
+                                возможностями инструментов разработчика.
+                            </div>
+
+                            <div class="example-item__decor">И, конечно, вы можете просто кликать по различным местам
+                                инструментов разработки и смотреть,
+                                что при этом появляется. Пожалуй, это наискорейший способ ими овладеть. Не забывайте про
+                                правый клик мыши и контекстные меню!
+                            </div>
+                        </div>
+                    </li>
+                    <!--homework code style tips-->
+                    <li class="example-items">
+                        <div class="example-item hoverable">Советы по стилю кода
+                            <span class="done">done</span>
+                            <span class="marker">V</span>
+                        </div>
+                        <div class="example-item__homework display__none">
+                            <div class="example-item__decor">
+                                Все правила синтаксиса, описанные в этой главе (и в ссылках на руководства по стилю),
+                                направлены на повышение читаемости вашего кода. О любых можно поспорить.
+                            </div>
+                            <div class="example-item__decor">
+                                Когда мы думаем о написании «лучшего» кода, мы должны задать себе вопросы:
+                                «Что сделает код более читаемым и лёгким для понимания?» и «Что может помочь избегать
+                                ошибок?».
+                                Это – основные моменты,
+                                о которых следует помнить при выборе и обсуждении стилей кода.
+                            </div>
+                            <div class="example-item__decor">
+                                Чтение популярных руководств по стилю позволит вам быть в курсе лучших практик и
+                                последних идей
+                                и тенденций в стилях написания кода.
+                            </div>
+                        </div>
+                    </li>
+                    <!--homework comentaries-->
+                    <li class="example-items">
+                        <div class="example-item hoverable">Коментарии
+                            <span class="done">done</span>
+                            <span class="marker">V</span>
+                        </div>
+                        <div class="example-item__homework display__none">
+                            <div class="example-item__decor">
+                                Комментарии – важный признак хорошего разработчика,
+                                причём как их наличие, так и отсутствие.
+                            </div>
+                            <div class="example-item__decor">
+                                Хорошие комментарии позволяют нам поддерживать код,
+                                дают возможность вернуться к нему после перерыва
+                                и эффективнее его использовать.
+                            </div>
+                            <div class="example-item__decor">
+                                <ul class="example-item__qualityofcode-liststyle">
+                                    <div class="example-item__decor">Комментируйте:</div>
+                                    <li>Общую архитектуру, вид «с высоты птичьего полёта».</li>
+                                    <li>Использование функций.</li>
+                                    <li>Неочевидные решения, важные детали.</li>
+                                </ul>
+                            </div>
+                            <div class="example-item__decor">
+                                <ul class="example-item__qualityofcode-liststyle">
+                                    <div class="example-item__decor">Избегайте комментариев:</div>
+                                    <li>Которые объясняют, как работает код, и что он делает.</li>
+                                    <li>Используйте их только в тех случаях, когда невозможно
+                                        сделать настолько простой и самодокументированный код,
+                                        что он не потребует комментариев.</li>
+                                </ul>
+                            </div>
+                            <div class="example-item__decor">
+                                Средства для генерации документации по коду, такие как JSDoc3,
+                                также используют комментарии: они их читают и генерируют HTML-документацию
+                                (или документацию в другом формате).
+                            </div>
+                        </div>
+                    </li>
+                    <!--homework ninja code-->
+                    <li class="example-items">
+                        <div class="example-item hoverable"> Ниндзя-код
+                            <span class="done">done</span>
+                            <span class="marker">V</span>
+                        </div>
+                        <div class="example-item__homework display__none">
+                            <div class="example-item__decor">
+                                <ul class="example-item__qualityofcode-liststyle">
+                                    <div class="example-item__decor">Когда пишешь код:</div>
+                                    <li>Думай о тех кто будет читать его!</li>
+                                    <li>Думай о тех кто будет читать его!</li>
+                                    <li>Думай о тех кто будет читать его!</li>
+                                    <li>Думай о тех кто будет читать его!</li>
+                                    <li>Думай о тех кто будет читать его!</li>
+                                    <li>Думай о тех кто будет читать его!</li>
+                                </ul>
+                                <div class="example-item__decor">Падаван Валера)))</div>
+                            </div>
+                    </li>
+                    <!--homework Mocha-->
+                    <li class="example-items">
+                        <div class="example-item hoverable">Автоматическое тестирование c использованием
+                            фреймворка Mocha
+                            <span class="done">done</span>
+                            <span class="marker">V</span>
+                        </div>
+                        <div class="example-item__homework display__none">
+                            <div class="example-item__decor">В BDD сначала пишут спецификацию, а потом реализацию.
+                                В конце у нас есть и то, и другое.</div>
+
+                            <div class="example-item__decor">Спецификацию можно использовать тремя способами:</div>
+
+                            <ul class="example-item__qualityofcode-liststyle">
+                                <li>Как Тесты – они гарантируют, что функция работает правильно.</li>
+                                <li>Как Документацию – заголовки блоков describe и it описывают поведение функции.</li>
+                                <li>Как Примеры – тесты, по сути, являются готовыми примерами использования функции.
+                                </li>
+                            </ul>
+                            <div class="example-item__decor">Имея спецификацию, мы можем улучшить, изменить и даже
+                                переписать функцию с нуля, и при этом
+                                мы будем уверены, что она продолжает работать правильно.
+                            </div>
+
+                            <div class="example-item__decor">Это особенно важно в больших проектах, когда одна
+                                функция может быть использована во
+                                множестве мест. Когда мы вносим в такую функцию изменения, у нас нет никакой возможности
+                                вручную проверить, что она продолжает работать правильно во всех местах, где её
+                                используют.
+                            </div>
+                        </div>
+                    </li>
+                    <!--homework polifils-->
+                    <li class="example-items">
+                        <div class="example-item hoverable">Полифилы
+                            <span class="done">done</span>
+                            <span class="marker">V</span>
+                        </div>
+                        <div class="example-item__homework display__none">
+                            <div class="example-item__decor">Когда мы используем современные возможности JavaScript,
+                                некоторые движки могут не
+                                поддерживать их. Как было сказано выше, не везде реализованы все функции.</div>
+
+                            <div class="example-item__decor">И тут приходит на помощь Babel.</div>
+
+                            <div class="example-item__decor">Babel – это транспилер. Он переписывает современный
+                                JavaScript-код в предыдущий стандарт.</div>
+                            <div class="example-item__decor">
+                                <a href="https://learn.javascript.ru/polyfills"
+                                    target="_blank">https://learn.javascript.ru/polyfills</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </section>
 <div class="footer">
     <ul class="footer__space">
-        <li class="footer__item hoverable"> Thaks!</li>
+        <li class="footer__item hoverable"> Thanks!</li>
         <li class="footer__item hoverable">For</li>
         <li class="footer__item hoverable">Lopes!</li>
     </ul>
 </div>    </div>
-    <script src="js\script.js"></script>
+    <script src="js\qualityOfCodePage.js"></script>
+    <script src="js\mainFunctionsAppInit.js"></script>
 </body>
 
 </html>

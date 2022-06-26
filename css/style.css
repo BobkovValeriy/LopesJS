@@ -557,7 +557,12 @@ h6 {
   width: auto;
 }
 
-.example-item__function-expressions li {
+.example-item__basejs-liststyle li {
+  list-style-type: circle;
+  margin: 0 0 0 40px;
+}
+
+.example-item__qualityofcode-liststyle li {
   list-style-type: circle;
   margin: 0 0 0 40px;
 }

@@ -1,15 +1,9 @@
 "use strict";
 
-//initialization of all functions
-appInit();
+//initialization functions of basisJSpage
+basisJSinit();
 
-function appInit() {
-    const appFunctions = [
-        initBurgerMenu,
-        initHover,
-        initSectionExpandArrows,
-    ];
-
+function basisJSinit() {
     const homeworkFunctions = [
         initHelloWorldHomework,
         initVariableHomework,
@@ -33,46 +27,7 @@ function appInit() {
         initArrowFunctions,
     ];
 
-    appFunctions.forEach(func => func());
     homeworkFunctions.forEach(func => func());
-}
-//it`s a menu burger logic
-function initBurgerMenu() {
-    const body = document.querySelector('body');
-    const menuBurger = document.querySelector('.menu__burger');
-    const menuPunkts = document.querySelector('.menu__punkts');
-
-    menuBurger.addEventListener("click", function (event) {
-        menuBurger.classList.toggle('active')
-        menuPunkts.classList.toggle('active')
-        body.classList.toggle('lock')
-    })
-}
-
-//it will init hover class in table
-function initHover() {
-    const hoover = document.querySelectorAll('.hoverable');
-    hoover.forEach(hooverItem => {
-        hooverItem.addEventListener('mouseover', function (event) {
-            hooverItem.classList.add('hoover');
-        });
-        hooverItem.addEventListener('mouseout', function (event) {
-            hooverItem.classList.remove('hoover');
-        });
-    });
-}
-
-//it will spin arrows
-function initSectionExpandArrows() {
-    const example = document.querySelectorAll('.example-item');
-
-    example.forEach(exampleItem => {
-        exampleItem.addEventListener("click", function (event) {
-            const rotate = exampleItem.querySelector('.marker');
-            rotate.classList.toggle('clicked');
-            exampleItem.nextElementSibling.classList.toggle('display__none');
-        });
-    });
 }
 
 //example of alert work
@@ -145,7 +100,8 @@ function initBaseOperator() {
         document.forms.baseOperatorsMath.baseOperatorsMathInput.value = "";
     });
 }
-//example1 of branching
+
+//examples of branching
 function initBranching1() {
     const branching1 = document.querySelector('.button__form-branching1')
 
@@ -160,7 +116,6 @@ function initBranching1() {
 
     })
 }
-//example2 of branching
 function initBranching2() {
     const branching2 = document.querySelector('.button__form-branching2');
 
@@ -173,6 +128,7 @@ function initBranching2() {
         alert(subBranching2answer);
     });
 }
+
 //example logic operators
 function initLogicOperators() {
     const logicOperators = document.querySelector('.button__form-logicoperators');
@@ -197,7 +153,8 @@ function initLogicOperators() {
         }
     })
 }
-//example cikles 1
+
+//example cikles 
 function initCikles1() {
     const cikles1 = document.querySelector('.button__cikles-1');
 
@@ -209,7 +166,7 @@ function initCikles1() {
         }
     });
 };
-//example cikles 2
+
 function initCikles2() {
     const cikles2 = document.querySelector('.button__cikles-2');
 
@@ -222,7 +179,7 @@ function initCikles2() {
         }
     });
 };
-//example cikles 3
+
 function initCikles3() {
     const cikles3 = document.querySelector('.button__cikles-3');
 
@@ -234,7 +191,7 @@ function initCikles3() {
         } while (cikles3val <= 100 && cikles3val);
     });
 };
-//example cikles 4
+
 function initCikles4() {
     const cikles4 = document.querySelector('.button__cikles-4');
 
@@ -250,7 +207,8 @@ function initCikles4() {
         };
     });
 }
-//example switch 1
+
+//examples switching
 function initSwitch1() {
     const switch1 = document.querySelector('.button__switch-1');
 
@@ -270,7 +228,7 @@ function initSwitch1() {
     });
 
 }
-//example switch 2
+
 function initSwitch2() {
     const switch2 = document.querySelector('.button__switch-2');
 
@@ -291,7 +249,8 @@ function initSwitch2() {
         }
     });
 }
-// example functions 1
+
+// examples functions 
 function initFunctions1() {
     const functions1 = document.querySelector('.button__function-1');
 
@@ -302,7 +261,7 @@ function initFunctions1() {
 
     })
 }
-// example functions 2
+
 function initFunctions2() {
     const functions2 = document.querySelector('.button__function-2');
 
@@ -313,7 +272,7 @@ function initFunctions2() {
         return (yourAge >= 18) || confirm('Родители разрешили?');
     })
 }
-// example functions 3
+
 function initMin(a, b) {
     return (a > b) ? a : b
 
@@ -329,7 +288,7 @@ function initFunctions3() {
         alert(initMin(a, b))
     });
 }
-// example functions 4
+
 function initPow(x, n) {
     let result = x;
 
@@ -353,7 +312,8 @@ function initFunctions4() {
 
     });
 }
-// example arrow functions
+
+// examples arrow functions
 function ask(question, yes, no) {
     if (confirm(question)) yes()
     else no();
