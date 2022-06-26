@@ -20,9 +20,7 @@ function basisJSinit() {
         initSwitch2,
         initFunctions1,
         initFunctions2,
-        initMin,
         initFunctions3,
-        initPow,
         initFunctions4,
         initArrowFunctions,
     ];
@@ -38,8 +36,7 @@ function initHelloWorldHomework() {
         const message = document.forms.hello_world.helloWorldInput.value
         if (message != "")
             alert(message);
-        else
-            alert('Ну напиши чёнить!')
+        else alert('Ну напиши чёнить!')
     });
 }
 
@@ -48,13 +45,13 @@ function initVariableHomework() {
     const variable = document.querySelector(".button__form-variable");
 
     variable.addEventListener('click', function (event) {
-        const name = document.forms.variables.variableInput.value
+        const name = document.forms.variables.variableInput.value;
+
         if (name != "") {
-            let admin = name;
+            const admin = name;
             alert('Переменная admin = ' + admin);
         }
-        else
-            alert('Ну напиши чёнить!')
+        else alert('Ну напиши чёнить!')
     });
 }
 
@@ -63,7 +60,7 @@ function initInteractionHomework() {
     const interaction = document.querySelector(".button__form-interaction");
 
     interaction.addEventListener('click', function (event) {
-        let name = prompt('Your name?', "nothing?")
+        const name = prompt('Your name?', "nothing?");
         if (name != "") {
             alert('Your name is ' + name + '!');
         }
@@ -82,21 +79,22 @@ function initBaseOperator() {
     const answer2 = document.querySelector(".answer2");
 
     baseOperatorButton.addEventListener('click', function (event) {
-        let expression = document.forms.baseOperatorsMath.baseOperatorsMathInput.value;
+        const expression = document.forms.baseOperatorsMath.baseOperatorsMathInput.value;
 
         if (expression !== "") {
             let result = eval(expression);
             let answer1TextElementContent = answer1.innerHTML + " " + result;
-            answer1.innerHTML = answer1TextElementContent;
+            answer1.textContent = answer1TextElementContent;
             let answer2TextElementContent = answer2.innerHTML + " " + typeof (result)
             answer2.innerHTML = answer2TextElementContent
         }
-        else
+        else {
             alert('Ну напиши чёнить!');
+        }
     });
     baseOperatorButtonCancel.addEventListener('click', function (event) {
-        answer1.innerHTML = 'Результат:';
-        answer2.innerHTML = 'Тип данных:';
+        answer1.textContent = 'Результат:';
+        answer2.textContent = 'Тип данных:';
         document.forms.baseOperatorsMath.baseOperatorsMathInput.value = "";
     });
 }
@@ -106,7 +104,8 @@ function initBranching1() {
     const branching1 = document.querySelector('.button__form-branching1')
 
     branching1.addEventListener('click', function (event) {
-        let branching1answer = prompt('Какое "официальное" название JavaScript?', '')
+        const branching1answer = prompt('Какое "официальное" название JavaScript?', '');
+
         if (branching1answer === 'ECMAScript') {
             alert('Верно!')
         } else {
@@ -120,10 +119,10 @@ function initBranching2() {
     const branching2 = document.querySelector('.button__form-branching2');
 
     branching2.addEventListener('click', function (event) {
-        let branching2answer = prompt('Введите число, а мы определим его знак', '')
+        const branching2answer = prompt('Введите число, а мы определим его знак', '');
 
 
-        let subBranching2answer = (branching2answer > 0) ? '1' :
+        const subBranching2answer = (branching2answer > 0) ? '1' :
             (branching2answer < 0) ? '-1' : '0';
         alert(subBranching2answer);
     });
@@ -134,16 +133,16 @@ function initLogicOperators() {
     const logicOperators = document.querySelector('.button__form-logicoperators');
 
     logicOperators.addEventListener('click', function (event) {
-        let login = prompt('Who are there?', '')
+        const login = prompt('Who are there?', '')
 
-        if (login == '' || 'null') {
+        if (login === '' || login === null) {
             alert('Отменено')
-        } else if (login == 'Админ') {
-            let password = prompt('Please enter your pass', '')
+        } else if (login === 'Админ') {
+            const password = prompt('Please enter your pass', '')
 
-            if (password == '' || 'null') {
+            if (password === '' || login === null) {
                 alert('Отменено')
-            } else if (password == 'Я Главный') {
+            } else if (password === 'Я Главный') {
                 alert('Здравствуйте!')
             } else {
                 alert('Неверный пароль')
@@ -196,7 +195,7 @@ function initCikles4() {
     const cikles4 = document.querySelector('.button__cikles-4');
 
     cikles4.addEventListener('click', function (event) {
-        let cikles4operand = document.forms.cikles.formCiklesInput.value;
+        const cikles4operand = document.forms.cikles.formCiklesInput.value;
 
         nextPrime:
         for (let i = 2; i <= cikles4operand; i++) {
@@ -213,14 +212,15 @@ function initSwitch1() {
     const switch1 = document.querySelector('.button__switch-1');
 
     switch1.addEventListener('click', function (event) {
-        let switch1operand = document.forms.switch.formSwitchInput.value;
+        const switch1operand = document.forms.switch.formSwitchInput.value;
 
         if (switch1operand === 'Edge') {
             alert("You've got the Edge!");
         } else if (switch1operand == 'Chrome'
             || switch1operand == 'Firefox'
             || switch1operand == 'Safari'
-            || switch1operand == 'Opera') {
+            || switch1operand == 'Opera'
+        ) {
             alert('Okay we support these browsers too');
         } else {
             alert('We hope that this page looks ok!');
@@ -233,7 +233,7 @@ function initSwitch2() {
     const switch2 = document.querySelector('.button__switch-2');
 
     switch2.addEventListener('click', function (event) {
-        let switch2operand = +prompt('Введите число между 0 и 3', '');
+        const switch2operand = +prompt('Введите число между 0 и 3', '');
 
         switch (switch2operand) {
             case 0:
@@ -251,14 +251,21 @@ function initSwitch2() {
 }
 
 // examples functions 
+function checkAge1(age) {
+    return (age > 18) ? true : confirm('Родители разрешили?');
+}
+
+function checkAge2(age) {
+    return (age > 18) || confirm('Родители разрешили?');
+}
+
 function initFunctions1() {
     const functions1 = document.querySelector('.button__function-1');
 
     functions1.addEventListener('click', function (event) {
-        let yourAge = prompt('укажите ваш возраст', '');
+        const yourAge = prompt('укажите ваш возраст', '');
 
-        return (yourAge >= 18) ? alert('true') : confirm('Родители разрешили?');
-
+        alert(checkAge1(yourAge));
     })
 }
 
@@ -266,15 +273,14 @@ function initFunctions2() {
     const functions2 = document.querySelector('.button__function-2');
 
     functions2.addEventListener('click', function (event) {
-        let yourAge = prompt('укажите ваш возраст', '');
+        const yourAge = prompt('укажите ваш возраст', '');
 
-
-        return (yourAge >= 18) || confirm('Родители разрешили?');
+        alert(checkAge2(yourAge));
     })
 }
 
 function initMin(a, b) {
-    return (a > b) ? a : b
+    return (a < b) ? a : b
 
 }
 
@@ -282,22 +288,21 @@ function initFunctions3() {
     const functions3 = document.querySelector('.button__function-3');
 
     functions3.addEventListener('click', function (event) {
-        let a = prompt('enter value of a vriable', '');
-        let b = prompt('enter value of b vriable', '');
+        const a = prompt('enter value of a vriable', '');
+        const b = prompt('enter value of b vriable', '');
 
         alert(initMin(a, b))
     });
 }
 
-function initPow(x, n) {
-    let result = x;
+function pow(x, n) {
+    const result = x;
 
     for (let i = 1; i < n; i++) {
-        alert(x)
         result *= x;
     }
 
-    return (result);
+    return result;
 
 }
 
@@ -308,7 +313,7 @@ function initFunctions4() {
         let x = prompt('enter value of x vriable', '');
         let n = prompt('enter value of n vriable', '');
 
-        alert(initPow(x, n));
+        alert(pow(x, n));
 
     });
 }
