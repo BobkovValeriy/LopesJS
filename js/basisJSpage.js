@@ -11,6 +11,8 @@ function basisJSinit() {
         initBaseOperator,
         initBranching1,
         initBranching2,
+        initBranching3,
+        initBranching4,
         initLogicOperators,
         initCikles1,
         initCikles2,
@@ -83,10 +85,10 @@ function initBaseOperator() {
 
         if (expression !== "") {
             let result = eval(expression);
-            let answer1TextElementContent = answer1.innerHTML + " " + result;
+            let answer1TextElementContent = answer1.textContent + " " + result;
             answer1.textContent = answer1TextElementContent;
-            let answer2TextElementContent = answer2.innerHTML + " " + typeof (result)
-            answer2.innerHTML = answer2TextElementContent
+            let answer2TextElementContent = answer2.textContent + " " + typeof (result)
+            answer2.textContent = answer2TextElementContent
         }
         else {
             alert('Ну напиши чёнить!');
@@ -125,6 +127,33 @@ function initBranching2() {
         const subBranching2answer = (branching2answer > 0) ? '1' :
             (branching2answer < 0) ? '-1' : '0';
         alert(subBranching2answer);
+    });
+}
+
+function initBranching3() {
+    const branching3 = document.querySelector('.button__form-branching3');
+
+    branching3.addEventListener('click', function (event) {
+        const aBranching3Value = +prompt('please enter an a value', '');
+        const bBranching3Value = +prompt('please enter a b value', '');
+        let result = (aBranching3Value + bBranching3Value < 4) ? 'мало' : 'много';
+
+        alert(result);
+    });
+}
+
+function initBranching4() {
+    const branching4 = document.querySelector('.button__form-branching4');
+
+    branching4.addEventListener('click', function (event) {
+        let message;
+        const login = prompt('введите логин', '')
+
+        message = (login == 'Сотрудник') ? 'Привет' :
+            (login == 'Директор') ? 'Здравствуйте' :
+                (login == '') ? 'Нет логина' : '';
+
+        alert(message)
     });
 }
 
@@ -195,13 +224,21 @@ function initCikles4() {
     const cikles4 = document.querySelector('.button__cikles-4');
 
     cikles4.addEventListener('click', function (event) {
-        const cikles4operand = document.forms.cikles.formCiklesInput.value;
+        const cikles4firstOperand = +(document.forms.cikles.formCiklesInput1.value) || 2;
+        const cikles4sekondOperand = +(document.forms.cikles.formCiklesInput2.value);
+        console.log(typeof (cikles4firstOperand))
+        console.log(typeof (cikles4sekondOperand))
 
         nextPrime:
-        for (let i = 2; i <= cikles4operand; i++) {
-            for (let j = 2; j < i; j++) {
+        for (let i = cikles4firstOperand; i <= cikles4sekondOperand; i++) {
+            //console.log('i=' + i)
+            let j = cikles4firstOperand
+
+            for (; j < i; j++) {
+                //console.log('j=' + j)
                 if (i % j == 0) continue nextPrime;
             }
+            //console.log('тут мы вывели' + i)
             alert(i)
         };
     });

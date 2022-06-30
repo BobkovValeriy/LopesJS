@@ -27,7 +27,7 @@
                 <a href="qualityOfCode.html" class="menu__link hoverable">Качество кода</a>
             </li>
             <li class="menu__punkt">
-                <a href="#" class="menu__link hoverable">Объекты: основы</a>
+                <a href="objects_basics.html" class="menu__link hoverable">Объекты: основы</a>
             </li>
             <li class="menu__punkt">
                 <a href="#" class="menu__link hoverable">Типы данных</a>
@@ -323,6 +323,55 @@
                                 </div>
 
                             </form>
+                            <div class="example-item__decor">Чему будут равны переменные a, b, c и d?</div>
+                            <ol class="ollisit">
+                                <li>let a = 1, b = 1;</li>
+                                <li></li>
+                                <li>let c = ++a; // ?</li>
+                                <li>let d = b++; // ?</li>
+                                <li></li>
+                                <li>a = 2;</li>
+                                <li>b = 2;</li>
+                                <li>c = 2;</li>
+                                <li>d = 1;</li>
+                            </ol>
+                            <div class="example-item__decor">Чему будут равны переменные a и x после исполнения кода в
+                                примере ниже?</div>
+                            <ol class="ollisit">
+                                <li>let a = 2;</li>
+                                <li></li>
+                                <li>let x = 1 + (a *= 2);</li>
+                                <li></li>
+                                <li>x = 5;</li>
+                                <li>a = 4;</li>
+                            </ol>
+                            <div class="example-item__decor">Какой результат будет у выражений ниже?</div>
+                            <ol class="ollisit">
+                                <li>"" + 1 + 0 = "10";</li>
+                                <li>"" - 1 + 0 = -1;</li>
+                                <li>true + false = 1;</li>
+                                <li>6 / "3" = 2;</li>
+                                <li>"2" * "3" = 6;</li>
+                                <li>4 + 5 + "px" = "9px";</li>
+                                <li>"$" + 4 + 5 = "$45"</li>
+                                <li>"4" - 2 = 2;</li>
+                                <li>"4px" - 2 = NaN;</li>
+                                <li>" -9 " + 5 = -4;</li>
+                                <li>" -9 " - 5 = -14;</li>
+                                <li>null + 1 = 0</li>
+                                <li>undefined + 1 = NaN;</li>
+                                <li>" \t \n" - 2 = -2;</li>
+                            </ol>
+                            <div class="example-item__decor">Какой результат будет у выражений ниже?</div>
+                            <ol class="ollisit">
+                                <li>5 > 4 thrue</li>
+                                <li>"ананас" > "яблоко" false</li>
+                                <li>"2" > "12" thrue</li>
+                                <li>undefined == null thrue</li>
+                                <li>undefined === null false</li>
+                                <li>null == "\n0\n" false</li>
+                                <li>null === +"\n0\n" false</li>
+                            </ol>
                         </div>
                     </li>
                     <!-- Условное ветвление: if, '?' -->
@@ -336,6 +385,10 @@
                             <div class="button__form button__form-branching1 hoverable">Пуск!</div>
                             <div class="example-item__decor-center">Покажите знак числа</div>
                             <div class="button__form button__form-branching2 hoverable">Пуск!</div>
+                            <div class="example-item__decor-center">Переписали 'if' в '?'</div>
+                            <div class="button__form button__form-branching3 hoverable">Пуск!</div>
+                            <div class="example-item__decor-center">Переписали 'if..else' в '?'</div>
+                            <div class="button__form button__form-branching4 hoverable">Пуск!</div>
                         </div>
                     </li>
                     <!-- Логические операторы-->
@@ -416,11 +469,17 @@
                             <div class="button__form button__cikles-3 hoverable">Пуск!</div>
                             <form name="cikles" action="#" class="form__cikles">
                                 <div class="form__cikles-item">
+                                    <label for="form__cikles-input" class="label">Обозначте нижнюю границу вывода
+                                        простых чисел</label>
+                                    <input id="form__cikles-input" type="text" value="" name="formCiklesInput1"
+                                        class="form__cikles-item-input">
                                     <label for="form__cikles-input" class="label">Обозначте верхнюю границу вывода
                                         простых чисел</label>
-                                    <input id="form__cikles-input" type="text" value="" name="formCiklesInput"
+                                    <input id="form__cikles-input" type="text" value="" name="formCiklesInput2"
                                         class="form__cikles-item-input">
-                                    <span class="button__form button__cikles-4 hoverable">Пуск!</span>
+                                    <span class="example-item__decor-center">
+                                        <div class="button__form button__cikles-4 hoverable ">Пуск!</div>
+                                    </span>
                                 </div>
                             </form>
                         </div>

@@ -36,6 +36,9 @@
     line-height: 1.5;
     transition: all 0.2s ease 0s;
 }
+.example-item__title{
+    padding-right: 40%;
+}
 .example-item{
     border-bottom: solid #0a6f7f;
 }
@@ -183,4 +186,8 @@
 .example-item__basejs-liststyle li{
     list-style-type: circle;
     margin: 0 0 0 40px;
+}
+.ollisit li{
+    list-style-type: decimal;
+    margin: 0 0 0 60px;
 }
