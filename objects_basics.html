@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS-Lopes2-objects-basics</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body class="main">
@@ -67,7 +68,23 @@
                             <span class="inprogress">inprogress</span>
                             <span class="marker">V</span>
                         </div>
-                        <div class="example-item__homework display__none"></div>
+                        <div class="example-item__homework display__none">
+                            <h2 class="example__title">Решения задач</h2>
+                            <div class="example-item__decor">
+                                <div class="swiper">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide">Slide 1</div>
+                                        <div class="swiper-slide">Slide 2</div>
+                                        <div class="swiper-slide">Slide 3</div>
+                                        ...
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="example-items">
                         <div class="example-item hoverable"><span class="example-item__title">Копирование
@@ -75,7 +92,9 @@
                             <span class="inprogress">inprogress</span>
                             <span class="marker">V</span>
                         </div>
-                        <div class="example-item__homework display__none"></div>
+                        <div class="example-item__homework display__none">
+
+                        </div>
                     </li>
                     <li class="example-items">
                         <div class="example-item hoverable"><span class="example-item__title">Сборка мусора</span>
@@ -135,6 +154,7 @@
 </div>    </div>
     <script src="js\objectsBasics.js"></script>
     <script src="js\mainFunctionsAppInit.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </body>
 
 </html>

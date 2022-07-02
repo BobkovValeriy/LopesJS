@@ -8,6 +8,7 @@ function appMainInit() {
         initBurgerMenu,
         initHover,
         initSectionExpandArrows,
+        initSwiper,
     ];
     appFunctions.forEach(func => func());
 }
@@ -48,5 +49,18 @@ function initSectionExpandArrows() {
             rotate.classList.toggle('clicked');
             exampleItem.nextElementSibling.classList.toggle('display__none');
         });
+    });
+}
+//it is swiper logic
+function initSwiper() {
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'vertical',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
     });
 }
