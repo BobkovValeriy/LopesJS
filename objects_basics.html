@@ -65,25 +65,94 @@
                 <ul class="example__list">
                     <li class="example-items">
                         <div class="example-item hoverable"><span class="example-item__title">Объекты</span>
-                            <span class="inprogress">inprogress</span>
+                            <span class="done">done</span>
                             <span class="marker">V</span>
                         </div>
                         <div class="example-item__homework display__none">
-                            <h2 class="example__title">Решения задач</h2>
-                            <div class="example-item__decor">
-                                <div class="swiper">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                        <!-- Slides -->
-                                        <div class="swiper-slide">Slide 1</div>
-                                        <div class="swiper-slide">Slide 2</div>
-                                        <div class="swiper-slide">Slide 3</div>
-                                        ...
-                                    </div>
-                                    <!-- If we need pagination -->
-                                    <div class="swiper-pagination"></div>
+                            <section class="information-of-objects">
+                                <div class="example-item__decor">Объекты – это ассоциативные массивы с рядом
+                                    дополнительных
+                                    возможностей.</div>
+                                <div class="example-item__decor">Они хранят свойства (пары ключ-значение), где:</div>
+                                <div class="example-item__decor">
+                                    <ul class="example-item__qualityofcode-liststyle">
+                                        <li>Ключи свойств должны быть строками или символами (обычно строками).</li>
+                                        <li>Значения могут быть любого типа.</li>
+                                    </ul>
                                 </div>
-                            </div>
+                                <div class="example-item__decor">Чтобы получить доступ к свойству, мы можем
+                                    использовать:
+                                </div>
+                                <div class="example-item__decor">
+                                    <ul class="example-item__qualityofcode-liststyle">
+                                        <li>Запись через точку: obj.property.</li>
+                                        <li>Квадратные скобки obj["property"]. Квадратные скобки позволяют взять ключ из
+                                            переменной, например, obj[varWithKey].</li>
+                                    </ul>
+                                </div>
+                                <div class="example-item__decor">Дополнительные операторы:</div>
+                                <div class="example-item__decor">
+                                    <ul class="example-item__qualityofcode-liststyle">
+                                        <li>Удаление свойства: delete obj.prop.</li>
+                                        <li>Проверка существования свойства: "key" in obj.</li>
+                                        <li>Перебор свойств объекта: цикл for for (let key in obj).</li>
+                                    </ul>
+                                </div>
+                                <div class="example-item__decor">То, что мы изучали в этой главе, называется «простым
+                                    объектом» («plain object») или просто Object.</div>
+                                <div class="example-item__decor">В JavaScript есть много других типов объектов:</div>
+                                <div class="example-item__decor">
+                                    <ul class="example-item__qualityofcode-liststyle">
+                                        <li>Array для хранения упорядоченных коллекций данных,</li>
+                                        <li>Date для хранения информации о дате и времени,</li>
+                                        <li>Error для хранения информации об ошибке.</li>
+                                        <li>… и так далее.</li>
+                                    </ul>
+                                </div>
+                                <div class="example-item__decor">У них есть свои особенности, которые мы изучим позже.
+                                    Иногда люди говорят что-то вроде «тип данных Array» или «тип данных Date»,
+                                    но формально они не являются отдельными типами, а относятся к типу данных Object.
+                                    Они лишь расширяют его различными способами.</div>
+                                <div class="example-item__decor">Объекты в JavaScript очень мощные. Здесь мы только
+                                    немного
+                                    углубились в действительно огромную тему.
+                                    Мы будем плотно работать с объектами и узнаем о них больше в следующих частях
+                                    учебника.
+                                </div>
+                            </section>
+                            <section class="exercise-of-objects">
+                                <h2 class="example__title">Решения задач</h2>
+                                <div class="example-item__decor">
+                                    <div class="swiper">
+                                        <!-- Additional required wrapper -->
+                                        <div class="swiper-wrapper">
+                                            <!-- Slides -->
+                                            <div class="swiper-slide">
+                                                <h2 class="example__title">Задача 1</h2>
+                                                <div class="button__form button__objects-exercise1 hoverable">Пуск!
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <h2 class="example__title">Задача 2</h2>
+                                                <div class="button__form button__objects-exercise2 hoverable">Пуск!
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <h2 class="example__title">Задача 4</h2>
+                                                <div class="button__form button__objects-exercise4 hoverable">Пуск!
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <h2 class="example__title">Задача 5</h2>
+                                                <div class="button__form button__objects-exercise5 hoverable">Пуск!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- If we need pagination -->
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
                     </li>
                     <li class="example-items">
@@ -152,9 +221,9 @@
         <li class="footer__item hoverable">Lopes!</li>
     </ul>
 </div>    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js\objectsBasics.js"></script>
     <script src="js\mainFunctionsAppInit.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </body>
 
 </html>

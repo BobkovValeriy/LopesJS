@@ -72,3 +72,113 @@ body{
 body.lock{
     overflow: hidden;
 }
+.example{
+    padding: 100px 0 0 0;
+    flex: 1 1 auto;
+    
+}
+.example__wrapper {
+    background-color: #FFC7BD;
+    margin: 4% auto;
+}
+.example__wrapper-item {
+    text-align: center;
+    font-size: 30px;
+}
+.example__title {
+    font-size: var(--text-size-header-1);
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+.example__title span{
+    color: #d83319;
+}
+.example__list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px;
+    background-color: #a815ec;
+}
+.example__list li:last-child{
+    padding-bottom: 10px;
+}
+.example-items {
+    background-color: #12b5ce;
+    font-size: var(--text-size-header-2);
+    position: relative;
+    padding: 0px 10px 0px 15px;
+    line-height: 1.5;
+    transition: all 0.2s ease 0s;
+}
+.example-item__title{
+    padding-right: 40%;
+}
+.example-item{
+    border-bottom: solid #0a6f7f;
+}
+.example-item:hover{
+    background-color: #0897ad;
+}
+.example-item__homework{
+    background-color: #12c7e3;
+    min-height: 150px;
+}
+.marker{
+    position: absolute;
+    font-size: var(--text-size-marker);
+    font-weight: 900;
+    top: 0;
+    right: 15px;
+    transition: all 0.2s ease 0s;
+}
+.done{
+    position: absolute;
+    color: green;
+    font-size: 8px;
+    font-weight: 900;
+    top: 5px;
+    right: 32px;
+}
+.done2{
+    position: absolute;
+    color: green;
+    font-size: 8px;
+    font-weight: 900;
+    top: 5px;
+    right: 56px;
+}
+.inprogress{
+    position: absolute;
+    color: red;
+    font-size: 8px;
+    font-weight: 900;
+    top: 5px;
+    right: 32px;
+}
+.clicked{
+    transform: rotate(180deg);
+}
+.button__form {
+    font-size: var(--text-size-header-1);
+    text-align: center;
+    margin: 26px auto;
+    width: 300px;
+    border-radius: 30px;
+    background-color: #a815ec;
+}
+@media(max-width: 768px){
+    .button__form {
+        text-align: center;
+        margin: 30px auto;
+        width: 200px;
+        border-radius: 20px;
+    }
+}
+.input-style{
+    padding: 5px 10px 5px 15px;
+    height: 40px;
+    width: 100%;
+    font-size: var(--text-size-common);
+    background-color: #13d9f8;
+    border-radius: 5px;
+}

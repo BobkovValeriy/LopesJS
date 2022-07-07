@@ -357,6 +357,110 @@ h6 {
   font-size: var(--text-size-header-1);
 }
 
+.hello__world, .variable, .base__operators-math {
+  padding: 10px 20px 20px 40px;
+  -ms-grid-column-align: auto;
+      justify-self: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.label {
+  display: block;
+  font-size: var(--text-size-common);
+}
+
+@media (max-width: 600px) {
+  .hello__world, .variable {
+    padding: 10px 20px 20px 40px;
+    -ms-grid-column-align: auto;
+        justify-self: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+.example-item__decor {
+  font-size: var(--text-size-common);
+  padding: 10px 10px 10px 20px;
+}
+
+.example-item__decor-center {
+  font-size: var(--text-size-header-2);
+  text-align: center;
+  margin: 26px auto;
+}
+
+.data__type {
+  list-style: square;
+  margin-left: 40px;
+}
+
+.green {
+  color: green;
+}
+
+.button__form-interaction {
+  position: absolute;
+  top: 50px;
+  bottom: auto;
+  left: 0;
+  right: 0;
+}
+
+.button__cikles-4,
+.button__switch-1 {
+  display: inline-block;
+}
+
+.form__cikles-item-input,
+.form__switch-item-input {
+  margin: 0 40px 0 40px;
+  width: auto;
+}
+
+.example-item__basejs-liststyle li {
+  list-style-type: circle;
+  margin: 0 0 0 40px;
+}
+
+.ollisit li {
+  list-style-type: decimal;
+  margin: 0 0 0 60px;
+}
+
+.example-item__qualityofcode-liststyle li {
+  list-style-type: circle;
+  margin: 0 0 0 40px;
+}
+
+body {
+  min-width: 420px;
+}
+
+.main {
+  background-color: #65A6D1;
+  height: 100%;
+}
+
+.hoover {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: #fff;
+  cursor: pointer;
+}
+
+.display__none {
+  display: none;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
 .example {
   padding: 100px 0 0 0;
   -webkit-box-flex: 1;
@@ -466,34 +570,6 @@ h6 {
           transform: rotate(180deg);
 }
 
-.hello__world, .variable, .base__operators-math {
-  padding: 10px 20px 20px 40px;
-  -ms-grid-column-align: auto;
-      justify-self: auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-}
-
-.label {
-  display: block;
-  font-size: var(--text-size-common);
-}
-
-.hello__world-input,
-.variable-input,
-.base__operators-math-item-input,
-.form__cikles-item-input,
-.form__switch-item-input {
-  padding: 5px 10px 5px 15px;
-  height: 40px;
-  width: 100%;
-  font-size: var(--text-size-common);
-  background-color: #13d9f8;
-  border-radius: 5px;
-}
-
 .button__form {
   font-size: var(--text-size-header-1);
   text-align: center;
@@ -511,91 +587,11 @@ h6 {
     border-radius: 20px;
   }
 }
-@media (max-width: 600px) {
-  .hello__world, .variable {
-    padding: 10px 20px 20px 40px;
-    -ms-grid-column-align: auto;
-        justify-self: auto;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
-}
-.example-item__decor {
+.input-style {
+  padding: 5px 10px 5px 15px;
+  height: 40px;
+  width: 100%;
   font-size: var(--text-size-common);
-  padding: 10px 10px 10px 20px;
-}
-
-.example-item__decor-center {
-  font-size: var(--text-size-header-2);
-  text-align: center;
-  margin: 26px auto;
-}
-
-.data__type {
-  list-style: square;
-  margin-left: 40px;
-}
-
-.green {
-  color: green;
-}
-
-.button__form-interaction {
-  position: absolute;
-  top: 50px;
-  bottom: auto;
-  left: 0;
-  right: 0;
-}
-
-.button__cikles-4,
-.button__switch-1 {
-  display: inline-block;
-}
-
-.form__cikles-item-input,
-.form__switch-item-input {
-  margin: 0 40px 0 40px;
-  width: auto;
-}
-
-.example-item__basejs-liststyle li {
-  list-style-type: circle;
-  margin: 0 0 0 40px;
-}
-
-.ollisit li {
-  list-style-type: decimal;
-  margin: 0 0 0 60px;
-}
-
-.example-item__qualityofcode-liststyle li {
-  list-style-type: circle;
-  margin: 0 0 0 40px;
-}
-
-body {
-  min-width: 420px;
-}
-
-.main {
-  background-color: #65A6D1;
-  height: 100%;
-}
-
-.hoover {
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  color: #fff;
-  cursor: pointer;
-}
-
-.display__none {
-  display: none;
-}
-
-body.lock {
-  overflow: hidden;
+  background-color: #13d9f8;
+  border-radius: 5px;
 }

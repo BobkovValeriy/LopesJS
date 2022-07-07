@@ -36,9 +36,10 @@ function initHelloWorldHomework() {
 
     helloWorld.addEventListener('click', function (event) {
         const message = document.forms.hello_world.helloWorldInput.value
-        if (message != "")
+
+        if (message)
             alert(message);
-        else alert('Ну напиши чёнить!')
+        else alert('Ну напиши чёнить!');
     });
 }
 
@@ -49,11 +50,11 @@ function initVariableHomework() {
     variable.addEventListener('click', function (event) {
         const name = document.forms.variables.variableInput.value;
 
-        if (name != "") {
+        if (name) {
             const admin = name;
             alert('Переменная admin = ' + admin);
         }
-        else alert('Ну напиши чёнить!')
+        else alert('Ну напиши чёнить!');
     });
 }
 
@@ -63,12 +64,12 @@ function initInteractionHomework() {
 
     interaction.addEventListener('click', function (event) {
         const name = prompt('Your name?', "nothing?");
-        if (name != "") {
+
+        if (name) {
             alert('Your name is ' + name + '!');
         }
         else {
             alert('Ну напиши чёнить!');
-
         }
     });
 }
@@ -86,9 +87,10 @@ function initBaseOperator() {
         if (expression !== "") {
             let result = eval(expression);
             let answer1TextElementContent = answer1.textContent + " " + result;
+            let answer2TextElementContent = answer2.textContent + " " + typeof (result);
+
             answer1.textContent = answer1TextElementContent;
-            let answer2TextElementContent = answer2.textContent + " " + typeof (result)
-            answer2.textContent = answer2TextElementContent
+            answer2.textContent = answer2TextElementContent;
         }
         else {
             alert('Ну напиши чёнить!');
@@ -103,13 +105,13 @@ function initBaseOperator() {
 
 //examples of branching
 function initBranching1() {
-    const branching1 = document.querySelector('.button__form-branching1')
+    const branching1 = document.querySelector('.button__form-branching1');
 
     branching1.addEventListener('click', function (event) {
         const branching1answer = prompt('Какое "официальное" название JavaScript?', '');
 
         if (branching1answer === 'ECMAScript') {
-            alert('Верно!')
+            alert('Верно!');
         } else {
             alert('Не знаете?');
             alert('“ECMAScript”!');
@@ -153,7 +155,7 @@ function initBranching4() {
             (login == 'Директор') ? 'Здравствуйте' :
                 (login == '') ? 'Нет логина' : '';
 
-        alert(message)
+        alert(message);
     });
 }
 
@@ -165,19 +167,19 @@ function initLogicOperators() {
         const login = prompt('Who are there?', '')
 
         if (login === '' || login === null) {
-            alert('Отменено')
+            alert('Отменено');
         } else if (login === 'Админ') {
-            const password = prompt('Please enter your pass', '')
+            const password = prompt('Please enter your pass', '');
 
             if (password === '' || login === null) {
-                alert('Отменено')
+                alert('Отменено');
             } else if (password === 'Я Главный') {
-                alert('Здравствуйте!')
+                alert('Здравствуйте!');
             } else {
-                alert('Неверный пароль')
+                alert('Неверный пароль');
             }
         } else {
-            alert('Я вас не знаю')
+            alert('Я вас не знаю');
         }
     })
 }
@@ -188,6 +190,7 @@ function initCikles1() {
 
     cikles1.addEventListener('click', function (event) {
         for (let i = 1; i < 11; i++) {
+
             if (i % 2 == 0) {
                 alert(i);
             }
@@ -212,7 +215,7 @@ function initCikles3() {
     const cikles3 = document.querySelector('.button__cikles-3');
 
     cikles3.addEventListener('click', function (event) {
-        let cikles3val
+        let cikles3val;
 
         do {
             cikles3val = prompt('введи число, большее 100', 0);
@@ -226,20 +229,18 @@ function initCikles4() {
     cikles4.addEventListener('click', function (event) {
         const cikles4firstOperand = +(document.forms.cikles.formCiklesInput1.value) || 2;
         const cikles4sekondOperand = +(document.forms.cikles.formCiklesInput2.value);
-        console.log(typeof (cikles4firstOperand))
-        console.log(typeof (cikles4sekondOperand))
 
         nextPrime:
         for (let i = cikles4firstOperand; i <= cikles4sekondOperand; i++) {
             //console.log('i=' + i)
-            let j = cikles4firstOperand
+            let j = cikles4firstOperand;
 
             for (; j < i; j++) {
                 //console.log('j=' + j)
                 if (i % j == 0) continue nextPrime;
             }
             //console.log('тут мы вывели' + i)
-            alert(i)
+            alert(i);
         };
     });
 }
@@ -317,7 +318,7 @@ function initFunctions2() {
 }
 
 function initMin(a, b) {
-    return (a < b) ? a : b
+    return (a < b) ? a : b;
 
 }
 
@@ -328,7 +329,7 @@ function initFunctions3() {
         const a = prompt('enter value of a vriable', '');
         const b = prompt('enter value of b vriable', '');
 
-        alert(initMin(a, b))
+        alert(initMin(a, b));
     });
 }
 
@@ -357,6 +358,7 @@ function initFunctions4() {
 
 // examples arrow functions
 function ask(question, yes, no) {
+
     if (confirm(question)) yes()
     else no();
 }

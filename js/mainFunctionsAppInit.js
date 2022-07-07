@@ -51,6 +51,7 @@ function initSectionExpandArrows() {
         });
     });
 }
+
 //it is swiper logic
 function initSwiper() {
     const swiper = new Swiper('.swiper', {
@@ -61,6 +62,18 @@ function initSwiper() {
         // If we need pagination
         pagination: {
             el: '.swiper-pagination',
+            clickable: true,
+        },
+        height: 300,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        on: {
+            resize: (swiper) => {
+                let totalGap = swiper.passedParams.spaceBetween * (swiper.passedParams.slidesPerView - 1);
+                let containerHeight = swiper.passedParams.slidesPerView * swiper.slides[0].clientHeight + totalGap;
+
+                swiper.el.style.height = containerHeight + 'px';
+            },
         },
     });
 }
