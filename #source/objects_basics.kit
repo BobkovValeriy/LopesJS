@@ -17,6 +17,7 @@
             <div class="example__wrapper">
                 <h1 class="example__title"> Объекты: <span>JS</span> основы.</h1>
                 <ul class="example__list">
+                    <!-- Objects-->
                     <li class="example-items">
                         <div class="example-item hoverable"><span class="example-item__title">Объекты</span>
                             <span class="done">done</span>
@@ -109,22 +110,78 @@
                             </section>
                         </div>
                     </li>
+                    <!-- Copying objects and links-->
                     <li class="example-items">
                         <div class="example-item hoverable"><span class="example-item__title">Копирование
                                 объектов и ссылки</span>
-                            <span class="inprogress">inprogress</span>
+                            <span class="done">done</span>
                             <span class="marker">V</span>
                         </div>
                         <div class="example-item__homework display__none">
-
+                            <section class="information-of-objects">
+                                <div class="example-item__decor">Объекты присваиваются и копируются по ссылке.
+                                    Другими словами, переменная хранит не «значение объекта», а «ссылку» (адрес в
+                                    памяти) на это значение.
+                                    Поэтому копирование такой переменной или передача её в качестве аргумента функции
+                                    приводит к копированию этой ссылки, а не самого объекта.
+                                </div>
+                                <div class="example-item__decor">
+                                    Все операции с использованием скопированных ссылок (например, добавление или
+                                    удаление свойств) выполняются с одним и тем же объектом.
+                                </div>
+                                <div class="example-item__decor">
+                                    Для «простого клонирования» объекта можно использовать Object.assign.
+                                    Необходимо помнить, что Object.assign не делает глубокое клонирование объекта. Если
+                                    внутри копируемого объекта есть свойство, значение которого не является примитивом,
+                                    оно будет передано по ссылке.
+                                    Для создания «настоящей копии» (полного клона объекта) можно воспользоваться методом
+                                    из сторонней JavaScript-библиотеки <a
+                                        href="https://lodash.com/docs/4.17.15#cloneDeep "
+                                        target="_blank">_.cloneDeep(obj).</a>
+                                </div>
+                            </section>
                         </div>
                     </li>
-                    <li class="example-items">
-                        <div class="example-item hoverable"><span class="example-item__title">Сборка мусора</span>
-                            <span class="inprogress">inprogress</span>
+                    <li class=" example-items">
+                        <div class="example-item hoverable"><span class="example-item__title">Сборка
+                                мусора</span>
+                            <span class="done">done</span>
                             <span class="marker">V</span>
                         </div>
-                        <div class="example-item__homework display__none"></div>
+                        <div class="example-item__homework display__none">
+                            <div class="example-item__decor"> Главное, что нужно знать:
+                                <ul class="example-item__qualityofcode-liststyle">
+                                    <li>Сборка мусора выполняется автоматически. Мы не можем ускорить или предотвратить
+                                        её.</li>
+                                    <li>Объекты сохраняются в памяти, пока они достижимы.</li>
+                                    <li>Если на объект есть ссылка – вовсе не факт, что он является достижимым (из
+                                        корня): набор взаимосвязанных объектов может стать недоступен в целом, как мы
+                                        видели в примере выше.</li>
+                                </ul>
+                            </div>
+                            <div class="example-item__decor">Современные движки реализуют разные продвинутые алгоритмы
+                                сборки мусора.</div>
+                            <div class="example-item__decor">О многих из них рассказано в прекрасной книге о сборке
+                                мусора «The Garbage Collection Handbook: The Art of Automatic Memory Management» (R.
+                                Jones и др.).</div>
+                            <div class="example-item__decor">Если вы знакомы с низкоуровневым программированием, то
+                                более подробная информация о сборщике мусора V8 находится в статье <a
+                                    href="https://jayconrod.com/posts/55/a-tour-of-v8-garbage-collection"
+                                    target="_blank" rel="noopener noreferrer">A tour of V8: Garbage</a>
+                                Collection.</div>
+                            <div class="example-item__decor">Также в <a href="https://v8.dev/" target="_blank"
+                                    rel="noopener noreferrer">блоге V8</a> время от времени публикуются статьи об
+                                изменениях в управлении памятью. Разумеется, чтобы изучить сборку мусора, вам лучше
+                                подготовиться, узнав о том как устроен движок V8 внутри в целом и почитав блог <a
+                                    href="https://mrale.ph/" target="_blank" rel="noopener noreferrer">Вячеслава
+                                    Егорова</a>, одного из инженеров, разрабатывавших V8. Я говорю про «V8», потому что
+                                он лучше
+                                всего освещается в статьях в Интернете. Для других движков многие подходы схожи, но
+                                сборка мусора отличается во многих аспектах.</div>
+                            <div class="example-item__decor">Глубокое понимание работы движков полезно, когда вам нужна
+                                низкоуровневая оптимизация. Было бы разумно запланировать их изучение как следующий шаг
+                                после того, как вы познакомитесь с языком.</div>
+                        </div>
                     </li>
                     <li class="example-items">
                         <div class="example-item hoverable"><span class="example-item__title">Методы объекта,
