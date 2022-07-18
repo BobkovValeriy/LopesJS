@@ -202,12 +202,12 @@ function initObjectsMethodsExercise6() {
             alert(user.name);
         }
         function retrnNameOfUser2() {
-            alert(this.name)
+            alert(this.name);
         }
 
         use(retrnTwo);
         use(retrnNameOfUser1);
         user.rtrn = retrnNameOfUser2;
-        use(user.rtrn());
+        use(() => user.rtrn());
     });
 };
