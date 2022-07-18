@@ -437,6 +437,13 @@ h6 {
   margin: 0 0 0 40px;
 }
 
+.objects-methods-exercise2__decor {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
 body {
   min-width: 420px;
 }
@@ -575,6 +582,7 @@ body.lock {
   text-align: center;
   margin: 26px auto;
   width: 300px;
+  height: 55px;
   border-radius: 30px;
   background-color: #a815ec;
 }
@@ -584,13 +592,14 @@ body.lock {
     text-align: center;
     margin: 30px auto;
     width: 200px;
+    height: 45px;
     border-radius: 20px;
   }
 }
 .input-style {
   padding: 5px 10px 5px 15px;
   height: 40px;
-  width: 100%;
+  width: 650px;
   font-size: var(--text-size-common);
   background-color: #13d9f8;
   border-radius: 5px;

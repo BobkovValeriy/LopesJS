@@ -9,6 +9,11 @@ function objectsBasicsInit() {
         initObjectsExercise2,
         initObjectsExercise4,
         initObjectsExercise5,
+        initObjectsMethodsExercise2,
+        initObjectsMethodsExercise3,
+        initObjectsMethodsExercise4,
+        initObjectsMethodsExercise5,
+        initObjectsMethodsExercise6,
     ];
     objectsBsicsFunctions.forEach(func => func());
 }
@@ -108,3 +113,101 @@ function initObjectsExercise5() {
         console.log(menu);
     });
 }
+
+//examples objects methods
+
+function initObjectsMethodsExercise2() {
+    const objectsMethodsExercise2Button = document.querySelector('.button__objects-methods-exercise2');
+
+    objectsMethodsExercise2Button.addEventListener('click', function (event) {
+        alert('obj.go(); и (obj.go)(); будет [object Object] поскольку в таком виде функция алерт выводит обозначение любого обьекта');
+        alert('(method = obj.go)(); будет undefined поскольку method это уже отдельная функция вне какого либо обьекта при "use strict"');
+        alert('(obj.go || obj.stop)() будет undefined поскольку при операции || обьекты перестают быть обьектами соответственно this не может определить к чему относится');
+    });
+};
+
+function initObjectsMethodsExercise3() {
+    const objectsMethodsExercise3Button = document.querySelector('.button__objects-methods-exercise3');
+
+    objectsMethodsExercise3Button.addEventListener('click', function (event) {
+        alert('будет ошибка поскольку в результатея выполнения let user = makeUser(); значение ref: станет undefined а у undefined нет свойств')
+    });
+};
+
+function initObjectsMethodsExercise4() {
+    const objectsMethodsExercise4Button = document.querySelector('.button__objects-methods-exercise4');
+
+    objectsMethodsExercise4Button.addEventListener('click', function (event) {
+        const calculator = {
+            a: 0,
+            b: 0,
+
+            read() {
+                this.a = +prompt('Input a value', 0);
+                this.b = +prompt('Input a value', 0);
+            },
+            sum() {
+                return this.a + this.b;
+            },
+            mul() {
+                return this.a * this.b;
+            },
+        };
+        calculator.read();
+        alert(calculator.sum());
+        alert(calculator.mul());
+    });
+};
+
+function initObjectsMethodsExercise5() {
+    const objectsMethodsExercise5Button = document.querySelector('.button__objects-methods-exercise5');
+
+    objectsMethodsExercise5Button.addEventListener('click', function (event) {
+        let ladder = {
+            step: 0,
+            up() {
+                this.step++;
+                return this;
+            },
+            down() {
+                this.step--;
+                return this;
+            },
+            showStep: function () {
+                alert(this.step);
+                return this;
+            }
+        };
+        ladder.up().up().down().showStep();
+    });
+};
+
+function initObjectsMethodsExercise6() {
+    const objectsMethodsExercise6Button = document.querySelector('.button__objects-methods-exercise6');
+
+    objectsMethodsExercise6Button.addEventListener('click', function (event) {
+        const user = {
+            name: 'user',
+        };
+        let countOfUse = 0;
+
+        function use(func) {
+            func();
+            countOfUse += 1;
+        };
+        function retrnTwo() {
+            alert(2);
+        };
+        function retrnNameOfUser1() {
+            alert(user.name);
+        }
+        function retrnNameOfUser2() {
+            alert(this.name)
+        }
+
+        use(retrnTwo);
+        use(retrnNameOfUser1);
+        user.rtrn = retrnNameOfUser2;
+        use(user.rtrn());
+    });
+};

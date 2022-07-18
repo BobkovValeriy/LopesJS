@@ -64,7 +64,7 @@ function initSwiper() {
             el: '.swiper-pagination',
             clickable: true,
         },
-        height: 300,
+        height: 430,
         slidesPerView: 1,
         spaceBetween: 10,
         on: {
