@@ -14,6 +14,9 @@ function objectsBasicsInit() {
         initObjectsMethodsExercise4,
         initObjectsMethodsExercise5,
         initObjectsMethodsExercise6,
+        initObjectsConstructorsExercise1,
+        initObjectsConstructorsExercise2,
+        initObjectsConstructorsExercise3,
     ];
     objectsBsicsFunctions.forEach(func => func());
 }
@@ -144,7 +147,7 @@ function initObjectsMethodsExercise4() {
 
             read() {
                 this.a = +prompt('Input a value', 0);
-                this.b = +prompt('Input a value', 0);
+                this.b = +prompt('Input b value', 0);
             },
             sum() {
                 return this.a + this.b;
@@ -200,14 +203,76 @@ function initObjectsMethodsExercise6() {
         };
         function retrnNameOfUser1() {
             alert(user.name);
-        }
+        };
         function retrnNameOfUser2() {
             alert(this.name);
-        }
+        };
 
         use(retrnTwo);
         use(retrnNameOfUser1);
         user.rtrn = retrnNameOfUser2;
         use(() => user.rtrn());
+    });
+};
+
+//examples objects constructors
+function initObjectsConstructorsExercise1() {
+    const objectsConstructorsExercise1Button = document.querySelector('.button__objects-constructors-exercise1');
+
+    objectsConstructorsExercise1Button.addEventListener('click', function (event) {
+        const constructorsExercise1Object = {};
+        function A() { return constructorsExercise1Object; };
+        function B() { return constructorsExercise1Object; };
+
+        alert(new A() == new B());
+        alert('const constructorsExercise1Object = {}; \n function A() { return constructorsExercise1Object; }; \n function B() { return constructorsExercise1Object; }; \n alert( new A() == new B() );');
+    });
+};
+
+function initObjectsConstructorsExercise2() {
+    const objectsConstructorsExercise2Button = document.querySelector('.button__objects-constructors-exercise2');
+
+    objectsConstructorsExercise2Button.addEventListener('click', function (event) {
+        function Calculator() {
+
+            this.read = function () {
+                this.a = +prompt('Input a value', 0);
+                this.b = +prompt('Input b value', 0);
+            };
+            this.sum = function () {
+                return this.a + this.b;
+            };
+            this.mul = function () {
+                return this.a * this.b;
+            };
+        };
+
+        let nameOfCalculator = prompt('please enter a name of calculator', 'calculator');
+
+        nameOfCalculator = new Calculator();
+        nameOfCalculator.read();
+
+        alert("Sum=" + nameOfCalculator.sum());
+        alert("Mul=" + nameOfCalculator.mul());
+    });
+};
+
+function initObjectsConstructorsExercise3() {
+    const objectsConstructorsExercise3Button = document.querySelector('.button__objects-constructors-exercise3');
+
+    objectsConstructorsExercise3Button.addEventListener('click', function (event) {
+        function Accumulator(startingValue) {
+            this.value = startingValue
+            this.read = function () {
+                this.value += +prompt('Input a value', 0);
+            };
+        };
+        let nameOfAccumulator = prompt('please enter a name of Accumulator', 'accumulator');
+        let startValue = +prompt('please enter a starting value', 0)
+
+        nameOfAccumulator = new Accumulator(startValue);
+        nameOfAccumulator.read();
+        nameOfAccumulator.read();
+        alert(nameOfAccumulator.value);
     });
 };

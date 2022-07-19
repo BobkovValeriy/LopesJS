@@ -320,13 +320,118 @@
                             </section>
                         </div>
                     </li>
+                    <!-- Objects  constructors-->
                     <li class="example-items">
                         <div class="example-item hoverable"><span class="example-item__title">Конструкторы, создание
                                 объектов через "new"</span>
-                            <span class="inprogress">inprogress</span>
+                            <span class="done">done</span>
                             <span class="marker">V</span>
                         </div>
-                        <div class="example-item__homework display__none"></div>
+                        <div class="example-item__homework display__none">
+                            <section class="information-of-objects__constructors">
+                                <div class="example-item__decor">
+                                    <ul class="example-item__qualityofcode-liststyle">
+                                        <li>Функции-конструкторы или просто конструкторы являются обычными функциями,
+                                            именовать которые следует с заглавной буквы.</li>
+                                        <li>Конструкторы следует вызывать при помощи оператора new. Такой вызов создаёт
+                                            пустой this в начале выполнения и возвращает заполненный в конце.</li>
+                                    </ul>
+                                </div>
+                                <div class="example-item__decor">Мы можем использовать конструкторы для создания
+                                    множества похожих объектов.</div>
+                                <div class="example-item__decor">JavaScript предоставляет функции-конструкторы для
+                                    множества встроенных объектов языка: например, Date, Set и других, которые нам ещё
+                                    предстоит изучить.</div>
+                            </section>
+                            <section>
+                                <h2 class="example__title">Решения задач</h2>
+                                <div class="example-item__decor">
+                                    <div class="swiper">
+                                        <!-- Additional required wrapper -->
+                                        <div class="swiper-wrapper">
+                                            <!-- Slides -->
+                                            <div class="swiper-slide">
+                                                <h2 class="example__title">Задача 1</h2>
+                                                <div class="example-item__decor">Возможно ли создать функции A и B в
+                                                    примере ниже, где объекты равны new A()==new B()?</div>
+                                                <div class="objects-methods-exercise2__decor">
+                                                    <ol class="ollisit">
+                                                        <li>function A() { ... }</li>
+                                                        <li>function B() { ... }</li>
+                                                        <li>let a = new A;</li>
+                                                        <li>let b = new B;</li>
+                                                        <li>alert( a == b );</li>
+                                                    </ol>
+                                                    <div
+                                                        class="button__form button__objects-constructors-exercise1 hoverable">
+                                                        Пуск!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <h2 class="example__title">Задача 2</h2>
+                                                <div class="example-item__decor">
+                                                    <ul class="example-item__qualityofcode-liststyle">Создайте
+                                                        функцию-конструктор Calculator, который создаёт объекты с тремя
+                                                        методами:
+                                                        <li>read() (читать) запрашивает два значения и сохраняет их как
+                                                            свойства объекта.
+                                                        </li>
+                                                        <li>sum() (суммировать) возвращает сумму сохранённых значений.
+                                                        </li>
+                                                        <li>mul() (умножить) перемножает сохранённые значения и
+                                                            возвращает
+                                                            результат.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="objects-methods-exercise2__decor">
+                                                    <ol class="ollisit">
+                                                        <li>let calculator = new Calculator();</li>
+                                                        <li>calculator.read();</li>
+                                                        <li>alert( "Sum=" + calculator.sum() );</li>
+                                                        <li>alert( "Mul=" + calculator.mul() );</li>
+                                                    </ol>
+                                                    <div
+                                                        class="button__form button__objects-constructors-exercise2 hoverable">
+                                                        Пуск!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <h2 class="example__title">Задача 3</h2>
+                                                <div class="example-item__decor">Напишите
+                                                    функцию-конструктор Accumulator(startingValue).
+                                                    <div class="example-item__decor">Объект, который она создаёт,
+                                                        должен уметь следующее:</div>
+                                                    <ul class="example-item__qualityofcode-liststyle">
+                                                        <li>Хранить «текущее значение» в свойстве value. Начальное
+                                                            значение устанавливается в аргументе конструктора
+                                                            startingValue.
+                                                        </li>
+                                                        <li>Метод read() использует prompt для получения числа и
+                                                            прибавляет его к свойству value.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="objects-methods-exercise2__decor">
+                                                    <ol class="ollisit">
+                                                        <li>let accumulator = new Accumulator(1);</li>
+                                                        <li>accumulator.read();</li>
+                                                        <li>accumulator.read();</li>
+                                                        <li>alert(accumulator.value); </li>
+                                                    </ol>
+                                                    <div
+                                                        class="button__form button__objects-constructors-exercise3 hoverable">
+                                                        Пуск!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                            </section>
+                        </div>
                     </li>
                     <li class="example-items">
                         <div class="example-item hoverable"><span class="example-item__title">Опциональная цепочка
