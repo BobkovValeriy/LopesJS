@@ -394,6 +394,11 @@ h6 {
   margin: 26px auto;
 }
 
+.example-item__decor-without-left-padding {
+  font-size: var(--text-size-common);
+  padding: 10px 10px 10px 0px;
+}
+
 .data__type {
   list-style: square;
   margin-left: 40px;
@@ -435,6 +440,7 @@ h6 {
 .example-item__qualityofcode-liststyle li {
   list-style-type: circle;
   margin: 0 0 0 40px;
+  font-size: var(--text-size-common);
 }
 
 .objects-methods-exercise2__decor {

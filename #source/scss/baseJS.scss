@@ -32,6 +32,10 @@
     text-align: center;
     margin: 26px auto;
 }
+.example-item__decor-without-left-padding{
+    font-size: var(--text-size-common);
+    padding: 10px 10px 10px 0px;
+}
 .variable-item {
 }
 .button__form-variable {
